@@ -17,6 +17,13 @@ class User < ActiveRecord::Base
   
   after_initialize :ensure_session_token
   
+  has_many(
+    :gigs,
+    class_name: "Gig",
+    foreign_key: :creator_id,
+    primary_key: :id
+  )
+  
   def password
     @password
   end 

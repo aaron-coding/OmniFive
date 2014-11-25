@@ -1,4 +1,4 @@
 Gigrr
 =====
 
-Gigrr is a clone of Fiver.com
+Gigrr is a clone of Fiverr.com
