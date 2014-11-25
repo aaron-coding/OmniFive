@@ -1,4 +1,12 @@
 <h1>Welcome to Gigrr</h1>
+  
+<% if logged_in? %>
+  <%= button_to "Log out", session_url, method: "delete" %>
+<% else %>
+  <%= render "login" %>
+  <%= render "signup" %>
+<% end %>
+  
 <div id="main">
 </div>
 
