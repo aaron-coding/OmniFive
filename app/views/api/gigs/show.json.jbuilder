@@ -1,0 +1,1 @@
+json.extract!(@gig, :title, :price, :creator_id)
