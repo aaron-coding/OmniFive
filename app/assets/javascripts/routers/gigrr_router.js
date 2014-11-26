@@ -6,10 +6,20 @@ Gigrr.Routers.Router = Backbone.Router.extend({
   },
   
   routes: {
-    "", "index"
+    "": "gigsIndex"
   },
   
-  index: {
-    
+  gigsIndex: function() {
+    this.gigs.fetch();
+    var indexView = new Gigrr.Views.GigsIndex({ collection: this.gigs });
+    this._swapView(indexView);
+  },
+  
+  _swapView: function(view){
+    if (this._currentView){
+      this._currentView.remove();
+    }
+    this._currentView = view;
+    this.$rootEl.html(view.render().$el);
   }
 });

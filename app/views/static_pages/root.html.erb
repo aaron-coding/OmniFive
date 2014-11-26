@@ -4,9 +4,9 @@
 <% if logged_in? %>
   <%= button_to "Log out", session_url, method: "delete" %>
   <!-- <%= button_to "Delete Account", user_url(current_user.id), method: "delete" %> -->
-  <div id="main">
+  <main role="main">
     main content
-  </div>
+  </main>
 <% else %>
 
   

@@ -4,9 +4,9 @@ window.Gigrr = {
   Views: {},
   Routers: {},
   initialize: function() {
-    var $rootEl = $("#main");
+    var $rootEl = $("main"); //grab main html element (not ID main, aka #main)
     new Gigrr.Routers.Router({
-      $rootEl: rootEl
+      $rootEl: $rootEl
     })
     Backbone.history.start()
     // alert('Hello from Backbone!');
