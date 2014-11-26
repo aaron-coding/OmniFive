@@ -1,10 +1,11 @@
-Gigrr.Views.GigsIndex = Backbone.View.extend({
+Gigrr.Views.GigsIndex = Backbone.CompositeView.extend({
 
   template: JST['gigs/index'],
   
   initialize: function(){
     this.listenTo(this.collection, "sync", this.render)
     this.$el.addClass("container-fluid")
+    
   },
   
   render: function(){
@@ -15,8 +16,12 @@ Gigrr.Views.GigsIndex = Backbone.View.extend({
       var gigView = new Gigrr.Views.GigsIndexItem({ model: gig });
       that.$(".gigs-index").append(gigView.render().$el);
     });
+      
     return this;
   },
+
+  
+  
 
    
 
