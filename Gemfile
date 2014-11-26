@@ -12,6 +12,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'newrelic_rpm'
 gem 'figaro'
 gem 'backbone-on-rails'
+gem 'bootstrap-sass'
 group :development do
   gem 'spring'
   gem 'better_errors'
