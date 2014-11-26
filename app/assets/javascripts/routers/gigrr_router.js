@@ -6,7 +6,8 @@ Gigrr.Routers.Router = Backbone.Router.extend({
   },
   
   routes: {
-    "": "gigsIndex"
+    "": "gigsIndex",
+    "posts/:id": "gigsShow"
   },
   
   gigsIndex: function() {
@@ -21,5 +22,10 @@ Gigrr.Routers.Router = Backbone.Router.extend({
     }
     this._currentView = view;
     this.$rootEl.html(view.render().$el);
+  },
+  
+  gigsShow: function(id){
+    var gig = this.gigs.getOrFetch(id);
+    
   }
 });
