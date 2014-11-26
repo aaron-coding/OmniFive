@@ -9,8 +9,13 @@ Gigrr.Views.GigsShow = Backbone.View.extend({
   render: function(){
     var renderedContent = this.template({ gig: this.model });
     this.$el.html(renderedContent);
-    var that = this;
+    this.addGigExtras();
     return this;
   },
+  
+  addGigExtras: function(){
+    var that = this;
+    // to be added
+  }
    
 });
