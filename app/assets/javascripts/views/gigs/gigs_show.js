@@ -15,7 +15,6 @@ Gigrr.Views.GigsShow = Backbone.View.extend({
   
   addGigExtras: function(){
     var that = this;
-    debugger
     // to be added
   }
    

@@ -18,10 +18,10 @@ Gigrr.Views.UsersShow = Backbone.CompositeView.extend({
   addGigsSubviews: function(){
     //All gigs belonging to the user are added to the page as their own view
     var that = this;  
-    this.model.gigs().each(function(gig){
-      var gigView = new Gigrr.Views.GigsIndexItem({ model: gig });
-      that.addSubview(".gigs-index", gigView);
-    });
+    
+    var gigIndexView = new Gigrr.Views.GigsIndex({ collection: this.model.gigs() });
+    this.addSubview(".gigs-index", gigIndexView);
+
   }
   
 });
