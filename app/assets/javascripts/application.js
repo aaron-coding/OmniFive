@@ -15,6 +15,7 @@
 //= require underscore
 //= require bootstrap-sprockets
 //= require backbone
+//= require jquery.serializeJSON.min
 //= require gigrr
 //= require_tree ../templates
 //= require_tree ./models
