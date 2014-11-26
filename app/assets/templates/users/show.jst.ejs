@@ -1,0 +1,11 @@
+<h2><%= user.escape("username") %></h2>
+<% var gigs = user.get("gigs")%>
+<% if (gigs) { %>
+  <% _.each(gigs, function(gig) { %>
+    <a href="#gigs/<%= gig.id %>"><div class="gigs-index-item"><img src="<%= gig.image_url%>">
+    <%= gig.title %></div></a>
+<%   }); %>  
+<% } %>
+  
+
+<div class="back-to-home"><a href="#">Back to Gigs Index</a></div>

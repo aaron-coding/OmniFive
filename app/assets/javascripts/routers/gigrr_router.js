@@ -7,7 +7,8 @@ Gigrr.Routers.Router = Backbone.Router.extend({
   
   routes: {
     "": "gigsIndex",
-    "gigs/:id": "gigsShow"
+    "gigs/:id": "gigsShow",
+    "users/:id": "usersShow"
   },
   
   gigsIndex: function() {
@@ -19,8 +20,14 @@ Gigrr.Routers.Router = Backbone.Router.extend({
   gigsShow: function(id){
     var gig = this.gigs.getOrFetch(id);
     var showView = new Gigrr.Views.GigsShow({ model: gig });
-    this._swapView(showView);
-    
+    this._swapView(showView);  
+  },
+  
+  usersShow: function(id){
+    var user = new Gigrr.Models.User({ id: id })
+    user.fetch();
+    var showView = new Gigrr.Views.UsersShow({ model: user });
+    this._swapView(showView);  
   },
   
   _swapView: function(view){
