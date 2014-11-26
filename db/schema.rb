@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141126180824) do
+ActiveRecord::Schema.define(version: 20141126194759) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "gig_extras", force: true do |t|
+    t.integer  "gig_id",     null: false
+    t.string   "title",      null: false
+    t.integer  "price",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "gig_extras", ["gig_id"], name: "index_gig_extras_on_gig_id", using: :btree
 
   create_table "gigs", force: true do |t|
     t.string   "title",       null: false

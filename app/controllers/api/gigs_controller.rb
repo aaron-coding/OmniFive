@@ -5,7 +5,7 @@ class Api::GigsController < ApplicationController
   end
   
   def show
-    @gig = Gig.find(params[:id])
+    @gig = Gig.includes(:creator, :extras).find(params[:id])
     render :show
   end
   

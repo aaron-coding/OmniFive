@@ -1,4 +1,5 @@
 <h2><%= user.escape("username") %></h2>
+<div class="user-desc"><%= user.escape("creator_desc")%> </div>
 <% var gigs = user.get("gigs")%>
 <% if (gigs) { %>
   <% _.each(gigs, function(gig) { %>
