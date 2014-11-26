@@ -9,7 +9,6 @@ window.Gigrr = {
       $rootEl: $rootEl
     })
     Backbone.history.start()
-    // alert('Hello from Backbone!');
   }
 };
 
