@@ -4,7 +4,7 @@ Gigrr.Views.GigsIndexItem = Backbone.View.extend({
   
   initialize: function(){
     this.listenTo(this.model, "sync", this.render)
-    this.$el.addClass("gig-index-item md-col-4")
+    this.$el.addClass("gigs-index-item")
   },
   
   render: function(){

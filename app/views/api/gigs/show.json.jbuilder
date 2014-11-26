@@ -1,1 +1,1 @@
-json.extract!(@gig, :title, :price, :creator_id)
+json.extract!(@gig, :title, :price, :creator_id, :image_url)
