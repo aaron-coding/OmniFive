@@ -1,4 +1,4 @@
-Gigrr.Views.GigsShow = Backbone.View.extend({
+Gigrr.Views.GigsShow = Backbone.CompositeView.extend({
 
   template: JST['gigs/show'],
   
@@ -9,13 +9,13 @@ Gigrr.Views.GigsShow = Backbone.View.extend({
   render: function(){
     var renderedContent = this.template({ gig: this.model });
     this.$el.html(renderedContent);
-    this.addGigExtras();
+    this.addGigExtrasIndex();
     return this;
   },
   
-  addGigExtras: function(){
-    var that = this;
-    // to be added
+  addGigExtrasIndex: function(){
+    var extrasIdxView = new Gigrr.Views.GigExtrasIndex({ collection: this.model.extras() })
+    this.addSubview(".main-gig-extras", extrasIdxView)
   }
    
 });

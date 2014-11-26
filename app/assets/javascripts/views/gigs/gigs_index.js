@@ -8,7 +8,7 @@ Gigrr.Views.GigsIndex = Backbone.CompositeView.extend({
   },
   
   render: function(){
-    var renderedContent = this.template({ gigs: this.collection });
+    var renderedContent = this.template();
     this.$el.html(renderedContent);
     this.addGigsSubviews();
     return this;
@@ -22,10 +22,4 @@ Gigrr.Views.GigsIndex = Backbone.CompositeView.extend({
       that.addSubview(".gigs-index", gigView);
     });    
   }
-
-  
-  
-
-   
-
 });
