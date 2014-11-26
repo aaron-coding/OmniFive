@@ -12,9 +12,10 @@ Gigrr.Models.User = Backbone.Model.extend({
   parse: function(response){
     if (response.gigs){
       var gigs = response.gigs;
-      this.gigs().set(gigs);
+      this.gigs().set(gigs, { parse: true });
       delete response.gigs;
     }
+    
     return response
   }
   
