@@ -1,2 +1,9 @@
-<%= extra.escape("title") %>
-<%= extra.escape("price") %>
+<% var gigIdentifier = "gig-extra.escape('id')" %>
+
+<label for="<%= gigIdentifier %>">
+  <%= extra.escape('title') %> 
+  <span class="gig-extra-price">Price: $<%= extra.escape("price") %></span>
+</label>
+<input type="checkbox" 
+  name="order[extras][]" 
+  id="<%= gigIdentifier %>" value="">
