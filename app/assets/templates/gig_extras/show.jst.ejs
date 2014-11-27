@@ -1,9 +1,15 @@
-<% var gigIdentifier = "gig-extra.escape('id')" %>
+<% var gigIdentifier = "gig-" + extra.escape('id') %>
+  <td class="chkbox"> 
+  <input type="checkbox" 
+    name="order[extras][]"
+    value="<%= gigIdentifier %>">
+  </td>
+  <td class="gig-extra-title">
+    <%= extra.escape('title') %> 
+  </td>
+  <td class="gig-extra-price">
+    Price: $<%= extra.escape("price") %>
+  </td>
 
-<label for="<%= gigIdentifier %>">
-  <%= extra.escape('title') %> 
-  <span class="gig-extra-price">Price: $<%= extra.escape("price") %></span>
-</label>
-<input type="checkbox" 
-  name="order[extras][]" 
-  id="<%= gigIdentifier %>" value="">
+
+

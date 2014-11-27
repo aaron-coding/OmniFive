@@ -7,8 +7,9 @@
 }
 
 .main-gig-extras {
-  width: 500px;
+  width: 75%;
   margin: 0 auto;
+  text-align: center;
 }
 
 .gigs-index-item img {
@@ -22,4 +23,13 @@
   padding: 16px 40px;
   color: #FFFFFF;
   border-radius: 3px;
+}
+
+.gig-extras-index-wrapper {
+    margin: 0 auto;
+}
+
+.gig-extra-price {
+  text-align: left;
+  margin-left: 4px;
 }
