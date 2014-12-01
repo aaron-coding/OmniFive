@@ -1,7 +1,7 @@
 class Api::OrdersController < ApplicationController
   
   def create
-    @order = Order.new(order_params)
+    @order = current_user.orders.new(order_params)
     if @order.save
       render :show      
     else

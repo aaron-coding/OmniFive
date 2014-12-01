@@ -37,9 +37,9 @@ Gigrr.Views.GigsShow = Backbone.CompositeView.extend({
   },
   
   createOrder: function(){
-    // $.post( "/api/orders", { 'order[gig_id]': 1 } ,function( data ){
-//       alert("success!!!")
-//     })
+    $.post( "/api/orders", { 'order[gig_id]': this.model.id } ,function( data ){
+        alert("success!!!")
+    })
     console.log("create order triggered");
     // This is the gig_id  this.model.id 
   }

@@ -25,6 +25,13 @@ class User < ActiveRecord::Base
     primary_key: :id
   )
   
+  has_many(
+    :orders,
+    class_name: "Order",
+    foreign_key: :buyer_id,
+    primary_key: :id
+  )
+  
   def password
     @password
   end 
