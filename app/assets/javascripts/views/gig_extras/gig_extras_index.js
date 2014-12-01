@@ -26,10 +26,10 @@ Gigrr.Views.GigExtrasIndex = Backbone.CompositeView.extend({
   
   render: function(){
     var renderedContent = this.template();
-    this.$el.html(renderedContent);
-    this.addGigsExtrasSubviews();
-    
-
+    if (this.collection.any()) {  //Do not render index if no gig extras exist
+      this.$el.html(renderedContent);
+      this.addGigsExtrasSubviews();      
+    }
     return this;
   },
   
