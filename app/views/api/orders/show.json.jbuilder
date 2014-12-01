@@ -1,0 +1,1 @@
+json.extract!(@order, :id, :buyer_id, :gig_id)

@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :gigs, only: [:create, :destroy, :show, :index]
     resources :gigextras, only: [:create, :update, :destroy]
     resources :users, only: [:show]
+    resources :orders, only: [:create, :show]
+    resources :orderextras, only: [:create]
   end
   
   
