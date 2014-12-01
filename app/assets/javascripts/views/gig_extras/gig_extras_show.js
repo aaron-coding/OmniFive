@@ -1,7 +1,7 @@
 Gigrr.Views.GigExtrasShow = Backbone.View.extend({
 
   template: JST['gig_extras/show'],
-  tagName: "<tr>",
+  tagName: "<tr class='extras-row'>",
   initialize: function(){
     this.listenTo(this.model, "sync", this.render)
   },
