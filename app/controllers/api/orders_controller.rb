@@ -5,10 +5,8 @@ class Api::OrdersController < ApplicationController
     if @order.save
       render :show      
     else
-      flash[:errors] = @order.errors.full_messages
-      render :show #TODO see exactly what should be done here.
+      render json: @order.errors.full_messages, status: :unprocessable_entity
     end
-
   end
   
   def show
@@ -19,7 +17,13 @@ class Api::OrdersController < ApplicationController
   private
   
   def order_params
-    params.require(:order).permit(:buyer_id, :gig_id)
+    params.require(:order).permit(
+      :buyer_id,
+      :gig_id# ,
+#       order_extras_attributes: [
+#         :gig_extra_id
+#       ]
+    )
   end
   
 end

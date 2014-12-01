@@ -21,4 +21,7 @@ class Order < ActiveRecord::Base
     primary_key: :id
   )
   
+  has_many(
+    :order_extras # finish this
+  )
 end

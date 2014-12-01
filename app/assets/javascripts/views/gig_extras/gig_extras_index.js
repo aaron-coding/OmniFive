@@ -1,5 +1,7 @@
 Gigrr.Views.GigExtrasIndex = Backbone.CompositeView.extend({
 
+//  tagName: 'form',
+
   template: JST['gig_extras/index'],
   
   initialize: function(){
