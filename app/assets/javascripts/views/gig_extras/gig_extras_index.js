@@ -7,6 +7,14 @@ Gigrr.Views.GigExtrasIndex = Backbone.CompositeView.extend({
     //this.$el.addClass("container-fluid")
   },
   
+  events: {
+    'change .chkbox': "updatePrice"
+  },
+  
+  updatePrice: function(){
+    alert("Checkbox changed")
+  },
+  
   render: function(){
     var renderedContent = this.template();
     this.$el.html(renderedContent);
