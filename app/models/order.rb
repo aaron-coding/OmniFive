@@ -10,4 +10,15 @@
 #
 
 class Order < ActiveRecord::Base
+  validates :buyer, :gig, presence: true
+  
+  belongs_to :gig
+    
+  belongs_to(
+    :buyer,
+    class_name: "User",
+    foreign_key: :buyer_id,
+    primary_key: :id
+  )
+  
 end
