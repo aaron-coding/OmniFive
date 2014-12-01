@@ -33,15 +33,22 @@ Gigrr.Views.GigsShow = Backbone.CompositeView.extend({
       this.gigPrice -= extraPrice;
     }
     $(".gig-final-price").html(this.gigPrice);    
-    // this.collection.trigger('update-price', extraPrice);
   },
   
   createOrder: function(){
-    $.post( "/api/orders", { 'order[gig_id]': this.model.id } ,function( data ){
-        alert("success!!!")
-    })
+    // var that = this;
+    var newOrder = new Gigrr.Models.Order({ gig_id: this.model.id })
+    newOrder.save({}, { 
+      success: function(){
+        console.log("success!!!")
+      }
+    });
+    // $.post( "/api/orders", { 'order[gig_id]': this.model.id } ,function( respData ){
+//       console.log("success!!!");
+//       // debugger
+//       console.log(respData)
+//     })
     console.log("create order triggered");
-    // This is the gig_id  this.model.id 
   }
   
    
