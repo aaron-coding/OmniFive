@@ -44,10 +44,10 @@ Gigrr.Views.GigsShow = Backbone.CompositeView.extend({
       }
     });
     // $.post( "/api/orders", { 'order[gig_id]': this.model.id } ,function( respData ){
-//       console.log("success!!!");
-//       // debugger
-//       console.log(respData)
-//     })
+    //   console.log("success!!!");
+    //   // debugger
+    //   console.log(respData)
+    // })
     console.log("create order triggered");
   }
   
