@@ -3,11 +3,12 @@ class Api::OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     if @order.save
-      login!(user)
+      render :show      
     else
       flash[:errors] = @order.errors.full_messages
+      render :show #TODO see exactly what should be done here.
     end
-    render :show
+
   end
   
   def show
