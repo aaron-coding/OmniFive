@@ -3,22 +3,33 @@ Gigrr.Views.GigExtrasIndex = Backbone.CompositeView.extend({
   template: JST['gig_extras/index'],
   
   initialize: function(){
-    this.listenTo(this.collection, "sync", this.render)
+    this.listenTo(this.collection, "sync", this.render);
     //this.$el.addClass("container-fluid")
+    this.gigPrice = 5;
   },
   
   events: {
-    'change .chkbox': "updatePrice"
+    'change .chkbox input': "updatePrice"
   },
   
-  updatePrice: function(){
-    alert("Checkbox changed")
+  updatePrice: function(event){
+    var curTarget = $(event.currentTarget);
+    var extraPrice = curTarget.data("price");
+    if (curTarget.prop("checked")) {
+      this.gigPrice += extraPrice;
+    } else {
+      this.gigPrice -= extraPrice;
+    }
+    $(".gig-final-price").html(this.gigPrice);    
+    // this.collection.trigger('update-price', extraPrice);
   },
   
   render: function(){
     var renderedContent = this.template();
     this.$el.html(renderedContent);
     this.addGigsExtrasSubviews();
+    
+
     return this;
   },
   
