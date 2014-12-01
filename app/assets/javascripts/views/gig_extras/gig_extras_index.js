@@ -9,7 +9,8 @@ Gigrr.Views.GigExtrasIndex = Backbone.CompositeView.extend({
   },
   
   events: {
-    'change .chkbox input': "updatePrice"
+    'change .chkbox input': 'updatePrice',
+    'click button.order-now': 'createOrder'
   },
   
   updatePrice: function(event){
@@ -22,6 +23,12 @@ Gigrr.Views.GigExtrasIndex = Backbone.CompositeView.extend({
     }
     $(".gig-final-price").html(this.gigPrice);    
     // this.collection.trigger('update-price', extraPrice);
+  },
+  
+  createOrder: function(){
+    // .ajax
+    console.log("create order triggered");
+    console.log(this.collection.gig_id);
   },
   
   render: function(){
