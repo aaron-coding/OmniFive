@@ -26,4 +26,14 @@ class Order < ActiveRecord::Base
   
   
   has_many :gig_extras, through: :order_extras, source: :gig_extra
+  
+  def total_price
+    total_price = gig.price
+    
+    self.gig_extras.each do |gig_extra|
+      total_price += gig_extra.price
+    end
+    
+    total_price
+  end
 end

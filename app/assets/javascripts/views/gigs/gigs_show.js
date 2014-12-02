@@ -53,11 +53,9 @@ Gigrr.Views.GigsShow = Backbone.CompositeView.extend({
     newOrder.save({}, { 
       success: function(){
         that.orders.add(newOrder);
-        console.log("success!!!")
         Backbone.history.navigate("orders/" + newOrder.id , { trigger: true } )
       }
     });
-    console.log("create order triggered");
   }
   
    
