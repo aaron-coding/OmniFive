@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       login!(user)
       redirect_to root_url
     else
-      flash[:errors] = "Invalid Username and/or Password. Try again"
+      flash[:errors] = ["Invalid Username and/or Password. Try again"]
       redirect_to root_url
     end
     

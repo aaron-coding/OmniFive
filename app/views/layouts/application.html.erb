@@ -8,7 +8,11 @@
 </head>
 <body>
   <div id="main-wrapper">
-    <%= flash[:errors] %>
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |error| %>
+        <div class="bg-warning error alert"><%= error %></div>
+      <% end %>
+    <% end %>
 
     <%= yield %>
   </div>

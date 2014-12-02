@@ -23,5 +23,4 @@ class Api::OrdersController < ApplicationController
       :gig_extra_ids => [])
   end
   
-  
 end
