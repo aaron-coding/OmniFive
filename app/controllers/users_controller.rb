@@ -4,16 +4,17 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
       login!(user)
+      redirect_to root_url
     else
       flash[:errors] = user.errors.full_messages
+      redirect_to new_user_url
     end
-    redirect_to root_url
   end
   
   def destroy
     user = current_user
     user.destroy
-    redirect_to root_url
+    redirect_to new_user_url
   end
   
   def new

@@ -10,14 +10,14 @@ class SessionsController < ApplicationController
       redirect_to root_url
     else
       flash[:errors] = ["Invalid Username and/or Password. Try again"]
-      redirect_to root_url
+      redirect_to new_session_url
     end
     
   end
   
   def destroy
     logout!(current_user)
-    redirect_to root_url
+    redirect_to new_session_url
   end
   
   private
