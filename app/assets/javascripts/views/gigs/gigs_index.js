@@ -4,7 +4,7 @@ Gigrr.Views.GigsIndex = Backbone.CompositeView.extend({
   
   initialize: function(){
     this.listenTo(this.collection, "sync", this.render)
-    this.$el.addClass("container-fluid")
+    this.$el.addClass("container")
   },
   
   render: function(){

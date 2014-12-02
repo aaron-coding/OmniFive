@@ -2,10 +2,11 @@
   <%= extra.escape('title') %> 
 </td>
 <td class="gig-extra-price">
-  Price: $ <%= extra.escape("price") %>
+  <label for="actual-chkbox">Price: $ <%= extra.escape("price") %></label>
 </td>
 <td class="chkbox"> 
-<input type="checkbox" 
+<input type="checkbox"
+  id="actual-chkbox"
   name="order[extras][]"
   data-gig-extra-id="<%= extra.escape('id') %>"
   data-price="<%= extra.escape('price') %>">
