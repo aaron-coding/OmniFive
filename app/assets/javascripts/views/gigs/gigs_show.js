@@ -49,7 +49,7 @@ Gigrr.Views.GigsShow = Backbone.CompositeView.extend({
   
   createOrder: function(){
     var that = this;
-    var newOrder = new Gigrr.Models.Order({ gig_id: this.model.id , order_extras_ids: this.selectedExtrasIds})
+    var newOrder = new Gigrr.Models.Order( { order: { gig_id: this.model.id, gig_extra_ids: this.selectedExtrasIds() }})
     newOrder.save({}, { 
       success: function(){
         that.orders.add(newOrder);

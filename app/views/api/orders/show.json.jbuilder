@@ -1,5 +1,9 @@
 json.extract!(@order, :id, :buyer_id)
 
+json.gig_extras(@order.order_extras) do |extra|
+  json.gig_extra extra.gig_extra
+end
+
 json.gig do
   json.id @order.gig.id
   json.title @order.gig.title

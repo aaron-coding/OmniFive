@@ -20,11 +20,8 @@ class Api::OrdersController < ApplicationController
     params.require(:order).permit(
       :buyer_id,
       :gig_id,
-      order_extras_ids: []# ,
-#       order_extras_attributes: [
-#         :gig_extra_id
-#       ]
-    )
+      :gig_extra_ids => [])
   end
+  
   
 end
