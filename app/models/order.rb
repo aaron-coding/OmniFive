@@ -7,6 +7,7 @@
 #  gig_id     :integer          not null
 #  created_at :datetime
 #  updated_at :datetime
+#  fulfilled  :boolean          default(FALSE), not null
 #
 
 class Order < ActiveRecord::Base

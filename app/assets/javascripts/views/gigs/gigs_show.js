@@ -2,9 +2,10 @@ Gigrr.Views.GigsShow = Backbone.CompositeView.extend({
 
   template: JST['gigs/show'],
   
-  initialize: function(){
+  initialize: function(options){
     this.listenTo(this.model, "sync", this.render);
     this.gigPrice = 5;
+    this.orders = options.orders;
   },
   
   render: function(){
@@ -36,18 +37,15 @@ Gigrr.Views.GigsShow = Backbone.CompositeView.extend({
   },
   
   createOrder: function(){
-    // var that = this;
+    var that = this;
     var newOrder = new Gigrr.Models.Order({ gig_id: this.model.id })
     newOrder.save({}, { 
       success: function(){
+        that.orders.add(newOrder);
         console.log("success!!!")
+        Backbone.history.navigate("orders/" + newOrder.id , { trigger: true })
       }
     });
-    // $.post( "/api/orders", { 'order[gig_id]': this.model.id } ,function( respData ){
-    //   console.log("success!!!");
-    //   // debugger
-    //   console.log(respData)
-    // })
     console.log("create order triggered");
   }
   

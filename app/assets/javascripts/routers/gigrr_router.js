@@ -3,6 +3,7 @@ Gigrr.Routers.Router = Backbone.Router.extend({
   initialize: function(options){
     this.gigs = new Gigrr.Collections.Gigs();
     this.$rootEl = options.$rootEl;
+    this.orders = new Gigrr.Collections.Orders();
   },
   
   routes: {
@@ -20,7 +21,7 @@ Gigrr.Routers.Router = Backbone.Router.extend({
   
   gigsShow: function(id){
     var gig = this.gigs.getOrFetch(id);
-    var showView = new Gigrr.Views.GigsShow({ model: gig });
+    var showView = new Gigrr.Views.GigsShow({ model: gig, orders: this.orders });
     this._swapView(showView);  
   },
   
@@ -32,8 +33,10 @@ Gigrr.Routers.Router = Backbone.Router.extend({
   },
   
   ordersShow: function(id){
-    var order = new Gigrr.Models.Order({ id: id })
-      
+    var order = this.orders.get(id);
+    // var order = new Gigrr.Models.Order({ id: id })
+    var ordersShowView = new Gigrr.Views.OrdersShow({ model: order });
+    this._swapView(ordersShowView);  
   },
   
   _swapView: function(view){
