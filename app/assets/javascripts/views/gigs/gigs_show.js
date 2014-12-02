@@ -16,8 +16,8 @@ Gigrr.Views.GigsShow = Backbone.CompositeView.extend({
   },
   
   addGigExtrasIndex: function(){
-    var extrasIdxView = new Gigrr.Views.GigExtrasIndex({ collection: this.model.extras() })
-    this.addSubview(".main-gig-extras", extrasIdxView)
+    this.extrasIdxView = new Gigrr.Views.GigExtrasIndex({ collection: this.model.extras() })
+    this.addSubview(".main-gig-extras", this.extrasIdxView)
   },
   
   events: {
@@ -39,7 +39,8 @@ Gigrr.Views.GigsShow = Backbone.CompositeView.extend({
   createOrder: function(){
     var that = this;
     var newOrder = new Gigrr.Models.Order({ gig_id: this.model.id })
-    newOrder.save({}, { 
+    // var extras = this.extrasIdxView.selectedExtraIds();
+    newOrder.save({gig_extra_ids: [..,]}, { 
       success: function(){
         that.orders.add(newOrder);
         console.log("success!!!")

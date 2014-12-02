@@ -9,6 +9,7 @@
 #  updated_at   :datetime
 #
 
-class OrderExtras < ActiveRecord::Base
-  
+class OrderExtra < ActiveRecord::Base
+  belongs_to :order
+  belongs_to :gig_extra
 end

@@ -23,6 +23,8 @@ class Order < ActiveRecord::Base
   )
   
   has_many(
-    :order_extras # finish this
+    :order_extras, class_name: 'OrderExtra' # finish this
   )
+  
+  has_many :gig_extras, through: :order_extras, source: :gig_extra
 end
