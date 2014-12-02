@@ -22,9 +22,8 @@ class Order < ActiveRecord::Base
     primary_key: :id
   )
   
-  has_many(
-    :order_extras, class_name: 'OrderExtra' # finish this
-  )
+  has_many :order_extras
+  
   
   has_many :gig_extras, through: :order_extras, source: :gig_extra
 end

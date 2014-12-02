@@ -21,30 +21,40 @@ Gigrr.Views.GigsShow = Backbone.CompositeView.extend({
   },
   
   events: {
-    'change .chkbox input': 'updatePrice',
+    'change .chkbox input': 'handleChkboxClick',
     'click button.order-now': 'createOrder'
   },
   
-  updatePrice: function(event){
+  handleChkboxClick: function(event){
     var curTarget = $(event.currentTarget);
     var extraPrice = curTarget.data("price");
-    if (curTarget.prop("checked")) {
-      this.gigPrice += extraPrice;
+    var gigExtraId = curTarget.data("gig-extra-id");
+    if (curTarget.prop("checked")) {  //If checked, add to array of extras and add to total price
+      this.gigPrice += extraPrice;         
+      this.selectedExtrasIds().push(gigExtraId)
     } else {
+      var idx = this.selectedExtrasIds().indexOf(gigExtraId);
+      this.selectedExtrasIds().splice(idx, 1);
       this.gigPrice -= extraPrice;
     }
     $(".gig-final-price").html(this.gigPrice);    
   },
   
+  selectedExtrasIds: function(){
+    if (!this._selectedExtrasId) {
+      this._selectedExtrasId = [];
+    }
+    return this._selectedExtrasId
+  },
+  
   createOrder: function(){
     var that = this;
-    var newOrder = new Gigrr.Models.Order({ gig_id: this.model.id })
-    // var extras = this.extrasIdxView.selectedExtraIds();
-    newOrder.save({gig_extra_ids: [..,]}, { 
+    var newOrder = new Gigrr.Models.Order({ gig_id: this.model.id , order_extras_ids: this.selectedExtrasIds})
+    newOrder.save({}, { 
       success: function(){
         that.orders.add(newOrder);
         console.log("success!!!")
-        Backbone.history.navigate("orders/" + newOrder.id , { trigger: true })
+        Backbone.history.navigate("orders/" + newOrder.id , { trigger: true } )
       }
     });
     console.log("create order triggered");

@@ -26,5 +26,5 @@ Gigrr.Views.GigExtrasIndex = Backbone.CompositeView.extend({
       that.addSubview(".gig-extras-index", extraView);
     });  
   }
-
+  
 });
