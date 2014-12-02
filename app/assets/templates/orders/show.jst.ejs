@@ -1,1 +1,6 @@
-<h1> Orders Show # <%= order.escape("id")%></h1>
+<h1>Order # <%= order.escape("id")%></h1>
+
+<h2> Your order of <br> '<strong><%= order.gig().get("title") %></strong>' <br> is on it's way! </h2>
+
+
+

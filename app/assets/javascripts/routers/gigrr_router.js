@@ -33,8 +33,7 @@ Gigrr.Routers.Router = Backbone.Router.extend({
   },
   
   ordersShow: function(id){
-    var order = this.orders.get(id);
-    // var order = new Gigrr.Models.Order({ id: id })
+    var order = this.orders.getOrFetch(id);
     var ordersShowView = new Gigrr.Views.OrdersShow({ model: order });
     this._swapView(ordersShowView);  
   },
