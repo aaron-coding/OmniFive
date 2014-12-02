@@ -1,11 +1,28 @@
 .gigs-index-item {
-  //background-color: #FFFFFF;
   width: 25%;
   float: left;
   padding-right: 20px;
-//  border: #FFFFFF solid 2px;
 }
 
+.gigs-index-item h3 {
+  color: #303030;
+  transition: color 0.3s;
+  margin: 4px 10px 10px 10px;
+  font-size: 15px;
+  line-height: 18px;
+  height: 50px;
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.gigs-index h3:hover {
+  color: #3eabfa;
+}
+
+.inner-gig-index {
+  cursor: pointer;  //This is clickable, akin to anchor tag
+}
 
 .inner-gig-index {
   background-color: white;
@@ -42,10 +59,6 @@
   margin-left: 4px;
 }
 
-.extras-row {
-//  height: 66px;
-  
-}
 .extras-row td {
   padding: 15px 15px 15px 0;
   font-size: 16px;
@@ -61,21 +74,4 @@
 
 .order-button-container {
   margin-top: 15px;
-}
-
-.gigs-index a, .gigs-index a:hover {
-  text-decoration: none;
-}
-
-.gigs-index a {
-  color: #303030;
-  transition: color 0.3s;
-}
-
-.gigs-index a:hover {
-  color: #3eabfa;
-}
-
-.inner-gig-index {
-  cursor: pointer;  //This is clickable, akin to anchor tag
 }

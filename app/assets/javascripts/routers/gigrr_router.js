@@ -14,12 +14,16 @@ Gigrr.Routers.Router = Backbone.Router.extend({
   },
   
   gigsIndex: function() {
+    $('.navbar-nav.nav li').removeClass('active');
+    $('#home-tab').addClass('active');
     this.gigs.fetch();
     var indexView = new Gigrr.Views.GigsIndex({ collection: this.gigs });
     this._swapView(indexView);
   },
   
   gigsShow: function(id){
+    $('.navbar-nav.nav li').removeClass('active');
+    // $('#home-tab').addClass('active');//activate the right one
     var gig = this.gigs.getOrFetch(id);
     var showView = new Gigrr.Views.GigsShow({ model: gig, orders: this.orders });
     this._swapView(showView);  
