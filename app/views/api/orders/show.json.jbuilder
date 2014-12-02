@@ -1,4 +1,4 @@
-json.extract!(@order, :id, :buyer_id)
+json.extract!(@order, :id, :buyer_id, :total_price)
 
 json.gig_extras(@order.order_extras) do |extra|
   json.gig_extra extra.gig_extra

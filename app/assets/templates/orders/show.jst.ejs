@@ -1,6 +1,8 @@
 <h1>Order # <%= order.escape("id")%></h1>
 
-<h2> Your order of <br> <strong><%= order.gig().get("title") %></strong> <br> is on its way! </h2>
+<div class="total-price"><p>Total amount due: <%= order.escape("total_price") %></p></div>
+
+<h2> Your order of <br> <strong><%= order.gig().escape("title") %></strong> <br> is on its way! </h2>
 
 
 <img src="<%= order.gig().escape('image_url')%>">
