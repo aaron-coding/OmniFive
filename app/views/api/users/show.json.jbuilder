@@ -1,4 +1,4 @@
-json.extract!(@user, :id, :username, :creator_desc, :created_at)
+json.extract!(@user, :id, :username, :creator_desc, :created_at, :image_url)
 
 json.gigs(@user.gigs) do |gig|
   json.id gig.id

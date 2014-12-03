@@ -19,7 +19,6 @@ Gigrr.Views.UsersShow = Backbone.CompositeView.extend({
     var that = this;  
     var gigIndexView = new Gigrr.Views.GigsIndex({ collection: this.model.gigs() });
     this.addSubview(".gigs-index", gigIndexView);
-
   }
   
 });
