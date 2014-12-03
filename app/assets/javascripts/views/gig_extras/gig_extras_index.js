@@ -3,7 +3,7 @@ Gigrr.Views.GigExtrasIndex = Backbone.CompositeView.extend({
 //  tagName: 'form',
 
   template: JST['gig_extras/index'],
-  
+  className: "gig-show-detail",
   initialize: function(){
     this.listenTo(this.collection, "sync", this.render);
     //this.$el.addClass("container-fluid")
