@@ -14,15 +14,17 @@
 
 </head>
 <body>
-  <%= render 'layouts/navbar' %>  
-  <div id="main-wrapper">
+  <div class="page-wrap">
+    <%= render 'layouts/navbar' %>  
+    <div id="main-wrapper">
 
-    <% if flash[:errors] %>
-      <%= render 'layouts/errors' %>
-    <% end %>
+      <% if flash[:errors] %>
+        <%= render 'layouts/errors' %>
+      <% end %>
 
-    <%= yield %>
-  </div>    
+      <%= yield %>
+    </div>    
+  </div>
   <%= render 'layouts/footer' %>
 </body>
 </html>
