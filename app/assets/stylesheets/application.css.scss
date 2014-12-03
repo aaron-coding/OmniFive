@@ -18,7 +18,17 @@
 
 #main-wrapper {
   text-align: center;
+  margin: 0 auto;
   margin-bottom: 25px;
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.gig-show-view-wrapper {
+  content: " ";
+  display: table;
+  clear: both;
 }
 
 body {

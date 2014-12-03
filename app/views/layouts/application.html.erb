@@ -8,7 +8,7 @@
   <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
-    <%= render 'layouts/navbar' %>  
+  <%= render 'layouts/navbar' %>  
   <div id="main-wrapper">
 
     <% if flash[:errors] %>
@@ -17,9 +17,6 @@
 
     <%= yield %>
   </div>    
-
-    <%= render 'layouts/footer' %>
-    
-
+  <%= render 'layouts/footer' %>
 </body>
 </html>
