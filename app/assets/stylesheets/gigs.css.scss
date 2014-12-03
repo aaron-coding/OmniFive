@@ -60,7 +60,7 @@
 }
 
 .main-gig-extras {
-  width: 75%;
+//  width: 75%;
   margin: 0 auto;
   text-align: center;
 }
@@ -113,11 +113,26 @@ td input[type="checkbox"] {
 
 /* Gig Show Page Styles */
 .gig-show-details {
-  width: 618px;
+  width: 100%;
   float: left;
 }
 
 .gig-show-creator-details {
   float: left;
+}
+
+.gig-extra-price label {
+  min-width: 80px;
+}
+
+.gig-show-view-wrapper {
+  width: 660px;
+  margin-right: 350px;
+}
+
+.gig-show-creator-details {
+  width: 325px;
+  float: right;
+  margin-right: -350px;
 }
 
