@@ -4,9 +4,14 @@
   <title>OmniFive</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= filepicker_js_include_tag %>
+  <script>
+    filepicker.setKey("<%= ENV['FILEPICKER_API_KEY'] %>");
+  </script>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.ico' %>
+  <link href="//fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet" type="text/css">
+
 </head>
 <body>
   <%= render 'layouts/navbar' %>  
