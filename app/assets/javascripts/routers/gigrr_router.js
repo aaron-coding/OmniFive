@@ -7,17 +7,17 @@ Gigrr.Routers.Router = Backbone.Router.extend({
   },
   
   routes: {
-    "": "gigsIndex",
+    "": "homePage",
     "gigs/:id": "gigsShow",
     "users/:id": "usersShow",
     "orders/:id": "ordersShow"
   },
   
-  gigsIndex: function() {
+  homePage: function() {
     $('.navbar-nav.nav li').removeClass('active');
     $('#home-tab').addClass('active');
     this.gigs.fetch();
-    var indexView = new Gigrr.Views.GigsIndex({ collection: this.gigs });
+    var indexView = new Gigrr.Views.GigsHomePage({ collection: this.gigs });
     this._swapView(indexView);
   },
   
