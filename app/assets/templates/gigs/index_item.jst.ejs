@@ -1,4 +1,12 @@
 <div class="inner-gig-index">
+
+
+<span class="gig-price">
+  <strong class="gig-index-order">Order</strong>
+  <strong>$<%= gig.escape("price")%></strong>
+</span>
+
+
   <img src="<%= gig.get('image_url')%>">
   <h3><%= gig.escape("title") %></h3>
 </div>

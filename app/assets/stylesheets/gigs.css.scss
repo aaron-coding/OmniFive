@@ -16,16 +16,42 @@
   text-decoration: none;
 }
 
-.gigs-index h3:hover {
+.gigs-index-item:hover h3 {
   color: #3eabfa;
 }
 
 .inner-gig-index {
   cursor: pointer;  //This is clickable, akin to anchor tag
+  background-color: white;
+  position: relative;
 }
 
-.inner-gig-index {
-  background-color: white;
+.gig-price strong{
+  float: left;
+  background-color: #3eabfa;
+  font-size: 16px;
+  color: #fff;
+  padding: 1px 7px;
+  height: 25px;
+  line-height: 23px;
+}
+
+.gig-price strong.gig-index-order {
+  padding-right: 0px;
+  font-size: 12px;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.gig-price:hover .gig-index-order{
+  opacity: 1;
+}
+
+.gig-price {
+  position: absolute;
+  top: 10px;
+  right: -3px;
 }
 
 .gigs-index-item img {
@@ -83,3 +109,4 @@ td input[type="checkbox"] {
 .gig-extra-price label {
   font-weight: normal;
 }
+
