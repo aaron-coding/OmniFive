@@ -18,6 +18,7 @@
 
 #main-wrapper {
   text-align: center;
+  margin-bottom: 25px;
 }
 
 body {
@@ -36,4 +37,17 @@ body {
 
 nav.navbar {
   border-radius: 0px;
+}
+
+footer {
+  border-top: 1px #e5e5e5 solid;
+  background-color: #FFFFFF;
+  font-size: 14px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer-main {
+  width: 1004px;
+  margin: 0 auto;
 }
