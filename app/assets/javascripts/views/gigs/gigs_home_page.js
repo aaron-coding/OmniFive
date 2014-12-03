@@ -4,7 +4,6 @@ Gigrr.Views.GigsHomePage = Backbone.CompositeView.extend({
   
   initialize: function(){
     this.listenTo(this.collection, "sync", this.render)
-    // this.$el.addClass("container")
   },
   
   render: function(){
@@ -16,7 +15,7 @@ Gigrr.Views.GigsHomePage = Backbone.CompositeView.extend({
   
   addGigsIndex: function(){
     var gigView = new Gigrr.Views.GigsIndex({ collection: this.collection });
-    this.addSubview(".gigs-index-wrapper", gigView);
+    this.addSubview(".gigs-index", gigView);
   }
         
 });
