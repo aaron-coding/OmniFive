@@ -113,6 +113,28 @@ td input[type="checkbox"] {
 
 
 /* Gig Show Page Styles */
+
+.gig-show-details h1 {
+  //text-align: left;
+//  margin: 0px;
+//  min-height: 52px;
+//  border-bottom: 1px solid #dddddd;
+//  font-size: 30px;
+//
+  text-align: left;
+  color: #0e0e0f;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  min-height: 52px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.gig-show-header{
+  padding: 15px;
+}
+
 .gig-show-details {
   width: 100%;
   float: left;
@@ -136,4 +158,29 @@ td input[type="checkbox"] {
   float: right;
   margin-right: -350px;
 }
+
+.gig-show-detail {
+  background-color: #FFFFFF;
+  border: 1px solid #dddddd;
+  margin-bottom: 20px;
+}
+
+.gig-show-detail header h2 {
+  font-size: 18px;
+  font-weight: bold;
+//  color: #0e0e0f;
+  text-align: left;
+  margin: 0px;
+}
+
+.gig-show-detail header {
+  background: #f7f7f7;
+  border-bottom: 1px solid #dddddd;
+  padding: 18px;
+}
+
+.gig-show-details-body img{
+  padding-bottom: 4px;
+}
+
 

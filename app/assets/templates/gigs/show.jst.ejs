@@ -1,18 +1,39 @@
 <div class="gig-show-view-wrapper">
+
   <div class="gig-show-details">
-    <h1><%= gig.escape("title") %> for $<%= gig.escape("price")%></h1>
-  
-    <img src="<%= gig.get('image_url')%>">
-    <div class="description">
-      <%= gig.escape("description") %>
-      <div class="main-gig-extras">
+
+    <div class="gig-show-detail">
+
+      <header class="gig-show-header">
+        <h1><%= gig.escape("title") %> for $<%= gig.escape("price")%></h1>
+      </header>
+
+      <div class="gig-show-details-body">
+        <img src="<%= gig.get('image_url')%>">
       </div>
+    </div>
+
+    <div class="gig-show-detail">
+      <header class="gig-show-header">
+        <h2>About this gig</h2>
+      </header>
+      <div class="gig-show-details-body">
+        <%= gig.escape("description") %>
+      </div>
+    </div>
+
+    <div class="main-gig-extras">
+
     </div>
   
     <div class="order-button-container"> 
-    <button class="order-now"> Order Gig ($<span class="gig-final-price"><%= gig.escape("price") %></span>)</button>
+      <button class="order-now"> Order Gig ($<span class="gig-final-price"><%= gig.escape("price") %></span>)</button>
     </div>
+
   </div>
+
+
+
   <aside class="gig-show-creator-details">
     <% if (gig.get("creator")) { %>
       <h4>By: <a href="#users/<%= gig.get('creator').id %>"><%= gig.get("creator").username %></a></h4>
