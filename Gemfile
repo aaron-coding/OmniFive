@@ -14,6 +14,7 @@ gem 'figaro'
 gem 'backbone-on-rails'
 gem 'bootstrap-sass'
 gem 'filepicker-rails'
+gem 'seed_dump'
 
 group :development do
   gem 'spring'
