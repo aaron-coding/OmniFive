@@ -13,22 +13,26 @@ Gigrr.Views.UsersEdit = Backbone.CompositeView.extend({
   
   handleSubmit: function(event){
     event.preventDefault();
-    
-    this.model.set($(event.currentTarget).serializeJSON())
+    var ignoreEmpty = function(val, inputName) {
+      if (val !== "") {
+        return val;
+      } 
+    }; //This function makes default image not get overridden
+    this.model.set($(event.currentTarget).serializeJSON({parseWithFunction: ignoreEmpty}))
     this.model.save({}, {
       success: function(){
-        console.log("success!")
+        // $('.gig-form').prepend('<p class="bg-success">Profile Saved!</p>');
+        alert("Profile Succesfully saved!")
       },
       error: function(){
-        console.log("error!!")
+        alert("Profile not saved")
       }
     })
   },
   
   updateAvatar: function(event){
-    console.log("event triggered for avatar")
-    $(event.currentTarget)
-    debugger
+    var newAvatar = $(event.currentTarget).serializeJSON().user.image_url;
+    this.$el.find(".small-thumb").attr('src', newAvatar);
   },
   
   render: function(){
