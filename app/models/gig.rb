@@ -9,11 +9,11 @@
 #  created_at  :datetime
 #  updated_at  :datetime
 #  image_url   :string(255)
-#  description :string(255)      not null
+#  description :text             not null
 #
 
 class Gig < ActiveRecord::Base
-  validates :title, :creator, :price, presence: true
+  validates :title, :creator, :price, :description, :image_url, presence: true
   
   belongs_to(
     :creator,

@@ -1,0 +1,33 @@
+<h1> Update your Profile</h1>
+<form action="users/<%= user.escape('id')%>" method="POST"> 
+  
+  
+  <label for="username">Username: </label>
+  <input type="text"
+    name="user[username]"
+    value="<%= user.get('username')%>">
+  <br>
+
+  <label for="creator_desc">Tell us about yourself: </label><br>
+  <textarea name="user[creator_desc]" id="creator_desc"><%= user.escape('creator_desc')%></textarea>
+
+<br>
+  <label for="password">Password: </label>
+  <input type="password"
+    name="user[password]">
+<br>
+
+  <input
+    type="filepicker"
+    class="fp-tagged"
+    data-fp-mimetype="image/*"
+    name="user[image_url]"
+    data-fp-button-text="Choose Image"
+    data-fp-button-class="btn btn-default">
+
+<br>
+
+  <input type="submit" value="Update Profile">
+
+</form>
+
