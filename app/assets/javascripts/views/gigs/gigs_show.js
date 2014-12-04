@@ -34,7 +34,7 @@ Gigrr.Views.GigsShow = Backbone.CompositeView.extend({
       });
     
       var gigIndexView = new Gigrr.Views.GigsIndex({ collection: otherGigsCollection });
-      this.addSubview(".gigs-index", gigIndexView);
+      this.addSubview(".gigs-index-wrapper", gigIndexView);
     }
 
   },
