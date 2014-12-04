@@ -4,10 +4,12 @@
   width: 800px;
   text-align: left;
   padding: 25px;
+  color: #777777;
 }
 
 .gig-form-row {
   padding: 20px 0px;
+  min-height: 55px;
 }
 .gig-form h1 {
   margin: 0px;
@@ -15,7 +17,10 @@
   padding-bottom: 15px;
 }
 
-
+.gig-form .primary-submit {
+  float: right;
+  margin-right: 50px;
+}
 .label-wrap {
   width: 35%;
   display: inline-block;
