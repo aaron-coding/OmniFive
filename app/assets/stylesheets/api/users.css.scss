@@ -1,12 +1,41 @@
 
-.edit-profile {
+.gig-form {
   background-color: #FFFFFF;
   width: 800px;
   text-align: left;
   padding: 25px;
 }
 
-.edit-profile h1 {
+.gig-form-row {
+  padding: 20px 0px;
+}
+.gig-form h1 {
   margin: 0px;
   border-bottom: 1px solid ;
+  padding-bottom: 15px;
+}
+
+
+.label-wrap {
+  width: 35%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.input-wrap {
+  width: 55%;
+  display: inline-block;
+}
+
+.input-wrap input[type=text], .input-wrap textarea{
+  width: 100%%;
+}
+
+.small-thumb {
+  width: 150px;
+  height: 150px;
+}
+
+.input-wrap button.valign-top {
+  vertical-align: top;
 }

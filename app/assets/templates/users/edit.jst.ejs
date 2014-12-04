@@ -1,27 +1,43 @@
 <h1> Public Profile Settings </h1>
 <form action="users/<%= user.escape('id')%>" method="POST"> 
-  
-  
-  <label for="username">Username: </label>
-  <input type="text"
-    name="user[username]"
-    value="<%= user.get('username')%>">
-  <br>
 
-  <label for="creator_desc">Tell us about yourself: </label><br>
-  <textarea name="user[creator_desc]" id="creator_desc"><%= user.escape('creator_desc')%></textarea>
+  <div class="gig-form-row">
+    <div class="label-wrap">
+      <label for="username">Username: </label>
+    </div>
+    
+    <div class="input-wrap"> 
+      <input type="text"
+        name="user[username]"
+        value="<%= user.get('username')%>">
+    </div>
+  </div>
 
-<br>
 
-  <input
-    type="filepicker"
-    class="fp-tagged"
-    data-fp-mimetype="image/*"
-    name="user[image_url]"
-    data-fp-button-text="Choose Image"
-    data-fp-button-class="btn btn-default">
+  <div class="gig-form-row">
+    <div class="label-wrap">
+      <label for="creator_desc">Tell us about yourself: </label><br>
+    </div>
+    <div class="input-wrap"> 
+      <textarea name="user[creator_desc]" id="creator_desc"><%= user.escape('creator_desc')%></textarea>
+    </div>
+  </div>
+  <div class="gig-form-row">
+    <div class="label-wrap">
+      <label for="fp-user-image">Choose a new Avatar</label>
+    </div>
+    <div class="input-wrap"> 
+    <img src="<%= user.escape('image_url')%>" class="small-thumb">
+      <input
+        type="filepicker"
+        class="fp-tagged"
+        data-fp-mimetype="image/*"
+        name="user[image_url]"
+        data-fp-button-text="Upload Image"
+        data-fp-button-class="btn btn-default valign-top">
+    </div>
 
-<br>
+  </div>
 
   <input type="submit" value="Update Profile">
 

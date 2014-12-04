@@ -1,7 +1,7 @@
 Gigrr.Views.UsersEdit = Backbone.CompositeView.extend({
 
   template: JST['users/edit'],
-  className: "edit-profile",
+  className: "gig-form",
   initialize: function(){
     this.listenTo(this.model, "sync", this.render);
   },
