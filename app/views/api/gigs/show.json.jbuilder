@@ -12,7 +12,7 @@ json.creator do
   json.created_at @gig.creator.created_at
   json.image_url @gig.creator.image_url
   json.creator_desc @gig.creator.creator_desc
-  json.other_gigs @gig.creator.gigs
+  json.other_gigs @gig.creator.other_gigs(@gig.id)
 end
 
 

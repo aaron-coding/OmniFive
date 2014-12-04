@@ -22,18 +22,9 @@ Gigrr.Views.GigsShow = Backbone.CompositeView.extend({
   },
   
   addCreatorsOtherGigs: function(){
-    // debugger
-    if (this.model.get('creator')) {
-      var other_gigs = this.model.get('creator').other_gigs;
-      var otherGigsCollection = new Gigrr.Collections.Gigs();
-      //Make each gig coming back from the server into a Backbone Model
-      _.each(other_gigs, function(gig) { 
-        var gigModel = new Gigrr.Models.Gig()
-        gigModel.set(gig)
-        otherGigsCollection.add(gigModel)  
-      });
-    
-      var gigIndexView = new Gigrr.Views.GigsIndex({ collection: otherGigsCollection });
+    var creator = this.model.creator();
+    if (creator) {
+      var gigIndexView = new Gigrr.Views.GigsIndex({ collection: creator.gigs() });
       this.addSubview(".gigs-index-wrapper", gigIndexView);
     }
 
@@ -48,7 +39,8 @@ Gigrr.Views.GigsShow = Backbone.CompositeView.extend({
     var curTarget = $(event.currentTarget);
     var extraPrice = curTarget.data("price");
     var gigExtraId = curTarget.data("gig-extra-id");
-    if (curTarget.prop("checked")) {  //If checked, add to array of extras and add to total price
+    //If checked, add to array of extras and add to total price
+    if (curTarget.prop("checked")) {  
       this.gigPrice += extraPrice;         
       this.selectedExtrasIds().push(gigExtraId)
     } else {

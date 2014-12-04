@@ -62,6 +62,10 @@ class User < ActiveRecord::Base
     self.session_token
   end
   
+  def other_gigs(gig_id)
+    self.gigs.reject { |gig| gig.id == gig_id }
+  end
+  
   private
   
   def ensure_session_token

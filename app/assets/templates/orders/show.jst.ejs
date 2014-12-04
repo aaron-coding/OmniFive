@@ -3,7 +3,9 @@
 
   <p>Order Confirmation #<%= order.escape("id")%></p>
 
-  <div class="total-price"><p>Amount charged to your account: <%= order.escape("total_price") %></p></div>
+  <!-- <div class="total-price"> -->
+    <p>Amount charged to your account: <%= order.escape("total_price") %></p>
+  <!-- </div> -->
 </div>
 
 <h2> Your order of <br> <strong><%= order.gig().escape("title") %></strong> <br> is on its way! </h2>

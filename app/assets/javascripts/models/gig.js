@@ -1,5 +1,8 @@
 Gigrr.Models.Gig = Backbone.Model.extend({
   urlRoot: "/api/gigs",
+  creator: function(){  
+    return this._creator;
+  },
   
   extras: function(){
     if (!this._extras){
@@ -16,6 +19,11 @@ Gigrr.Models.Gig = Backbone.Model.extend({
       var extras = response.gigextras;
       this.extras().set(extras);
       delete response.gigextras
+    }
+    
+    if (response.creator){
+      this._creator = new Gigrr.Models.User(response.creator, {parse: true});
+      delete response.creator;
     }
   
     return response;    

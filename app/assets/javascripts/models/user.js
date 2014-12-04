@@ -8,13 +8,16 @@ Gigrr.Models.User = Backbone.Model.extend({
     
     return this._gigs;
   },
-  
+
   parse: function(response){
-    if (response.gigs){
-      var gigs = response.gigs;
+    //Make this use || operator to parse either gigs or other_gigs
+    if (response.gigs || response.other_gigs){
+      var gigs = response.gigs || response.other_gigs;
       this.gigs().set(gigs, { parse: true });
       delete response.gigs;
     }
+    
+
     
     return response
   }

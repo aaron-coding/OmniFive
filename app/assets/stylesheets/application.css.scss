@@ -63,6 +63,7 @@ footer, .page-wrap:after {
   content: " ";
   display: table;
   clear: both;
+  min-width: 95%;
 }
 
 .gig-show-view-wrapper {
@@ -133,8 +134,6 @@ footer ul {
 .custom-container {
   margin-right: auto;
   margin-left: auto;
-//  padding-left: 15px;
-//  padding-right: 15px;
 }
 
 .custom-container {
