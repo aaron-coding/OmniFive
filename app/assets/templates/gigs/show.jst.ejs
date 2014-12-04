@@ -9,7 +9,9 @@
       </header>
 
       <div class="gig-show-details-body">
-        <img src="<%= gig.get('image_url')%>/convert?w=650&h=500&fit=crop">
+        <% if (gig.get('image_url')) { %>
+          <img src="<%= gig.get('image_url')%>/convert?w=650&h=500&fit=crop">
+        <% } %>
       </div>
     </div>
 
@@ -32,10 +34,25 @@
 
   </div>
 
-  <aside class="gig-show-creator-details">
-    <% if (gig.get("creator")) { %>
-      <h4>By: <a href="#users/<%= gig.get('creator').id %>"><%= gig.get("creator").username %></a></h4>
-    <% } %>
+  <aside class="gig-show-sidebar">
+    <div class="order-button-container sidebar-section"> 
+      <button class="order-now large-btn"> Order Gig ($<span class="gig-final-price"><%= gig.escape("price") %></span>)</button>
+    </div>
+  
+    <section class="creator-details sidebar-section">
+      <% if (gig.get("creator")) { %>
+        
+        <div class="sub-section">
+          <img src="<%= gig.get('creator').image_url %>" class="small-thumb img-circle">
+          <h4><a href="#users/<%= gig.get('creator').id %>"><%= gig.get("creator").username %></a></h4>
+          <small>OmniFive Top Seller</small>
+        </div>
+        
+        <div class="sub-section sub-section-description">        
+           <%= gig.get('creator').creator_desc %>
+        </div>
+      <% } %>
+    </section>
   </aside>
     
 </div>

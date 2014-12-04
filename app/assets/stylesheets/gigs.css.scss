@@ -75,6 +75,12 @@
   padding: 16px 40px;
   color: #FFFFFF;
   border-radius: 3px;
+  width: 225px;
+}
+
+.order-now.large-btn {
+  width: 300px;
+  margin: 13px;
 }
 
 .gig-extras-index-wrapper {
@@ -95,9 +101,7 @@
   border-bottom: 1px #dddddd solid;
 }
 
-.order-now {
-  width: 225px;
-}
+
 
 .order-button-container {
   margin-top: 15px;
@@ -115,12 +119,6 @@ td input[type="checkbox"] {
 /* Gig Show Page Styles */
 
 .gig-show-details h1 {
-  //text-align: left;
-//  margin: 0px;
-//  min-height: 52px;
-//  border-bottom: 1px solid #dddddd;
-//  font-size: 30px;
-//
   text-align: left;
   color: #0e0e0f;
   font-family: Helvetica, Arial, sans-serif;
@@ -140,10 +138,6 @@ td input[type="checkbox"] {
   float: left;
 }
 
-.gig-show-creator-details {
-  float: left;
-}
-
 .gig-extra-price label {
   min-width: 80px;
 }
@@ -153,10 +147,12 @@ td input[type="checkbox"] {
   margin-right: 350px;
 }
 
-.gig-show-creator-details {
+.gig-show-sidebar {
   width: 325px;
   float: right;
-  margin-right: -350px;
+  margin-right: -375px;
+  margin-left: 25px;
+  float: left;
 }
 
 .gig-show-detail {
@@ -212,4 +208,36 @@ td input[type="checkbox"] {
   text-align: left;
 }
 
+
+.creator-details {
+  background: #FFFFFF;
+  padding: 25px 15px 5px 15px;
+}
+
+.sidebar-section {
+  border: 1px solid #dddddd;
+}
+
+.gig-show-sidebar .order-button-container{
+  background-color: #FFFFFF;
+  margin-top: 0px;
+}
+
+.gig-show-sidebar > div {
+  margin-bottom: 20px;
+}
+
+.gig-show-sidebar h4 {
+  margin-bottom: 0px;
+}
+
+.sidebar-section {
+  color: #999999;
+}
+
+.sub-section-description {
+  border-top: 1px solid #DDDDDD;
+  color: #555555;
+  padding: 10px 0px;
+}
 

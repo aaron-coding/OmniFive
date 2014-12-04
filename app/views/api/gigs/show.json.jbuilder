@@ -8,6 +8,8 @@ json.creator do
   json.id @gig.creator.id
   json.username @gig.creator.username
   json.created_at @gig.creator.created_at
+  json.image_url @gig.creator.image_url
+  json.creator_desc @gig.creator.creator_desc
 end
 
 
