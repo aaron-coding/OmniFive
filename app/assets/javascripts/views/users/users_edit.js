@@ -7,7 +7,8 @@ Gigrr.Views.UsersEdit = Backbone.CompositeView.extend({
   },
   
   events: {
-    "submit form": "handleSubmit"
+    "submit form": "handleSubmit",
+    "change input[type=filepicker]": "updateAvatar"
   },
   
   handleSubmit: function(event){
@@ -22,6 +23,12 @@ Gigrr.Views.UsersEdit = Backbone.CompositeView.extend({
         console.log("error!!")
       }
     })
+  },
+  
+  updateAvatar: function(event){
+    console.log("event triggered for avatar")
+    $(event.currentTarget)
+    debugger
   },
   
   render: function(){
