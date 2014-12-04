@@ -34,6 +34,9 @@
 
   </div>
 
+
+
+
   <aside class="gig-show-sidebar">
     <div class="order-button-container sidebar-section"> 
       <button class="order-now large-btn"> Order Gig ($<span class="gig-final-price"><%= gig.escape("price") %></span>)</button>
@@ -56,3 +59,9 @@
   </aside>
     
 </div>
+        
+        <% if (gig.get("creator")) { %>
+          <h3>Other Gigs by <a href="#users/<%= gig.get('creator').id %>"><%= gig.get("creator").username %></a></h3>
+        <% } %>
+          <div class="gigs-index">
+          </div>

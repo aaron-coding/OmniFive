@@ -1,5 +1,6 @@
 Gigrr.Models.Gig = Backbone.Model.extend({
   urlRoot: "/api/gigs",
+  
   extras: function(){
     if (!this._extras){
       this._extras = new Gigrr.Collections.GigExtras([], {
