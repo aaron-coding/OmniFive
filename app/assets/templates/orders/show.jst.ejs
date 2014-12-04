@@ -1,13 +1,46 @@
 <div class="thank-you-box">
   <h2><strong>Thank you</strong>, your order has been placed.</h2>
 
-  <p>Order Confirmation #<%= order.escape("id")%></p>
+  <p>Order Confirmation: <strong>#<%= Number(order.escape("id")) + 340293 %></strong></p>
 
-  <!-- <div class="total-price"> -->
-    <p>Amount charged to your account: <%= order.escape("total_price") %></p>
-  <!-- </div> -->
+  <p>Amount charged to your account: $<%= order.escape("total_price") %></p>
+
+  <% if (order.gig().get('creator')){ %>
+    <ul>
+      <li>
+        <em><%= order.gig().escape("title") %></em> will be completed by 
+        <a href="#users/<%= order.gig().get('creator').id %>" ><%= order.gig().get('creator').username %></a>
+        in approximately 7 days.
+      </li>
+    </ul>      
+  <% } %>
+  
+  <p> Extras included in your order: </p>
+  <ul>
+    <% _.each(order.get('gig_extras'), function(extra) {  %>
+      <li>
+        <%= extra.title %> for&nbsp;$<%= extra.price %>
+      </li>
+    <% }) %>
+  </ul>
+      
+  <% if (order.gig().escape('image_url')) { %>
+    <img src="<%= order.gig().escape('image_url')%>/convert?w=600&h=400&fit=crop">
+  <% } %>
 </div>
+    
+<% if (order.gig().get("creator")) { %>
+  <% var creator = order.gig().get("creator") %>
+    <img src="<%= creator.image_url %>" class="small-thumb img-circle">
+    <h4><a href="#users/<%= creator.id %>"><%= creator.username %></a></h4>
+    <small>OmniFive Top Seller</small>
+   <%= creator.creator_desc %>
+<% } %>
 
-<h2> Your order of <br> <strong><%= order.gig().escape("title") %></strong> <br> is on its way! </h2>
 
-<img src="<%= order.gig().escape('image_url')%>">
+
+  
+
+
+
+
