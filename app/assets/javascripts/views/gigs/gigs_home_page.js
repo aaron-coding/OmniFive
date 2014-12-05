@@ -14,8 +14,8 @@ Gigrr.Views.GigsHomePage = Backbone.CompositeView.extend({
       url: "/session",
       data: {
         'user': {
-          'username': 'Aaron',
-          'password': 'aaron'
+          'username': 'guest',
+          'password': 'password'
         }
       },
       success: function(){
