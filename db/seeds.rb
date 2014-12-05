@@ -37,7 +37,7 @@ GigExtra.create!([
   {gig_id: 2, title: "I will play a guitar in the background", price: 5},
   {gig_id: 2, title: "I will record the video on a night-time background with the stars showing", price: 5},
   {gig_id: 3, title: "I will add the map to your site in under 5 hours", price: 15},
-  {gig_id: 4, title: "I will narrate the story in my regular voice and send you the mp3", price: 5},
+  {gig_id: 4, title: "I will send you the mp3 file", price: 5},
   {gig_id: 4, title: "I will narrate the story in a gladiator voice", price: 10},
   {gig_id: 4, title: "I will narrate the story in Daffy Duck's voice", price: 10},
   {gig_id: 5, title: "I will include the Northern Lights in your photo", price: 5},
