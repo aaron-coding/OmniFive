@@ -30,6 +30,15 @@
   background-color: white;
   position: relative;
   border: 1px #dddddd solid;
+  transition: box-shadow .5s ease;
+}
+
+.inner-gig-index:hover {
+  -webkit-box-shadow: 7px 12px 10px rgba(0,0,0,0.3);
+  -moz-box-shadow: 7px 12px 10px rgba(0,0,0,0.3);
+  box-shadow: 7px 12px 10px rgba(0,0,0,0.3);
+  opacity: 1;
+  cursor: pointer;
 }
 
 .gig-price strong{
