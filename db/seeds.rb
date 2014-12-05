@@ -14,7 +14,18 @@ Gig.create!([
   {title: "I will add Google Maps to your existing website", creator_id: 1, price: 5, image_url: "https://www.filepicker.io/api/file/LUdINzJsRYqbfMSqKpak", description: "I will add Google Maps to your existing website"},
   {title: "I will write a glorious short story based on your life", creator_id: 1, price: 5, image_url: "https://www.filepicker.io/api/file/r2Kll5yQse9w0DYpfZ4G", description: "The story is 250 words long by default, but I can make it longer with gig extras. I also need events in your life that you are proud of so I can write about them. I can use names of friends and relatives in your life or I can make the names up."},
   {title: "I will photoshop the sky into the color of your choice", creator_id: 2, price: 5, image_url: "https://www.filepicker.io/api/file/XoIndkmSSNu9DdH357VK", description: "I have many years of photoshop experience and can blend in any color into the sky. I can make it look also like the Northern Lights, but for that you have to add a Gig Extra"},
-  {title: "I will get you ripped with a workout program", creator_id: 2, price: 5, image_url: "https://www.filepicker.io/api/file/OexfPZZURoqPxg9u9M8A", description: "I will lay out a rigorous program that will get you ripped guaranteed."}
+  {title: "I will get you ripped with a workout program", creator_id: 2, price: 5, image_url: "https://www.filepicker.io/api/file/OexfPZZURoqPxg9u9M8A", description: "I will lay out a rigorous program that will get you ripped guaranteed."},
+  {title: "I will make a 25 song Hip-Hop playlist based on your preferences", creator_id: 3, price: 5, image_url: "https://www.filepicker.io/api/file/op4a5CTvSzSqSRS8SgfC", description: "I have a vast knowledge of Hip-Hop, I know which rappers sound like others. If you let me know who you like, I will give you sick recommendations!"},
+  {title: "I will save you from any villain", creator_id: 4, price: 5, image_url: "https://www.filepicker.io/api/file/4jsm66tRS0WQkKNvlWfr", description: "It can be pretty dangerous around here and there are always more than one person in danger. I will try and save everyone but, if you buy this gig, you'll be on the top of the priorty list."},
+  {title: "I will have my dog tell you \"I love you\"", creator_id: 5, price: 5, image_url: "https://www.filepicker.io/api/file/D2kVoc6VRanRTPNScqn0", description:"My dog, Mishka, is famous and is very articulate, he can speak anything that I teach him. I can have him say \"I love you\" to you."},
+  {title: "I will save you money by finding the best deal for you", creator_id: 6, price: 5, image_url: "https://www.filepicker.io/api/file/l5h8ZmMT9up2DNQHGeaQ", description:"Don't get fooled by \"Sales\" many times they are not actually on sale. In fact, some stores even raise prices of things for a day, to then bring it down to a \"Sale.\" I will find you real deals."},
+  
+  {title: "I will give you legal advice", creator_id: 7, price: 5, image_url: "https://www.filepicker.io/api/file/HV6qG1v0SqO13hk8pTal", description:"I can advise you legally in any situation, this valuable service can cost hundreds, if not thousands, of dollars, but I have enough money to go around so I can want to make this accessible to anyone."},
+  {title: "I will make a short rap about you", creator_id: 3, price: 5, image_url: "https://www.filepicker.io/api/file/DHwGAtu7QGuDJlpONvLg", description:"I can dish out a rap about you. All I need to know is a couple of things about you and what you stand for."},
+  {title: "I will mention your name in my next rap battle", creator_id: 3, price: 5, image_url: "https://www.filepicker.io/api/file/tlJobnnTS9ZkDANMrvMq", description: "In my next rap battle I will make a metaphor in your name talking about some quality you possess. These get recorded and shown to hundreds."},
+  {title: "I will add your name to my Tupac Shrine", creator_id: 3, price: 5, image_url: "https://www.filepicker.io/api/file/JHG9cSdCT46e56AsykeA", description: "I have a shrine to honor Tupac Shakur, and can include your name in a piece of paper that will reside there forevermore. I can also say a prayer for him in your name."},
+  {title: "I will submit your photo to the Daily Bugle", creator_id: 4, price: 5, image_url: "https://www.filepicker.io/api/file/CaYkCKfR0OGt87IbUWt4", description: "Because I've been so successful taking pictures of myself in the Spidey suit, I have special access to submit photos to the Daily Bugle directly. I can submit your picture for just $5"}
+  
 ])
 
 GigExtra.create!([
@@ -32,4 +43,22 @@ GigExtra.create!([
   {gig_id: 6, title: "I will include a diet plan for the next 4 weeks", price: 15},
   {gig_id: 6, title: "I will call you every 4 hours to make sure you are making progress on the program", price: 20},
   {gig_id: 6, title: "I will send you a video series of workouts 10 HOURS LONG ", price: 20},
+  {gig_id: 7, title: "I will expand the playlist to 50 songs", price: 5},
+  {gig_id: 7, title: "I will make the playlist in any genre other than Hip-Hop", price: 20},
+  {gig_id: 8, title: "I will take a photograh of me saving you and post it on the Official Spiderman Instagram", price: 25},
+  {gig_id: 8, title: "I will stand up to ANY villain, including Venom", price: 15},
+  {gig_id: 8, title: "I will give you my autograph on any poster or picture", price: 10},
+  {gig_id: 9, title: "My dog will include your first name when he says \"I love you\"", price: 10},
+  {gig_id: 9, title: "I will buy extra treats for my dog in your name", price: 5},
+  {gig_id: 10, title: "I will compare prices on a bonus of 25 different sources", price: 10},
+  {gig_id: 11, title: "I will send a Cease and Desist letter to the address and recipient of your choice", price: 15},
+  {gig_id: 12, title: "I will deliver the rap in under 6 hours", price: 10},
+  {gig_id: 12, title: "I will make the rap twice as long (40 lines)", price: 5},
+  {gig_id: 13, title: "I will add 3 lines about you in the battle", price: 5},
+  {gig_id: 13, title: "I will give you the recording of the rap battle", price: 10},
+  {gig_id: 14, title: "I will say a prayer at the shrine in your name", price: 5},
+  {gig_id: 15, title: "I will give my own personal pitch for the photo", price: 15},
+  {gig_id: 15, title: "I will put a \"Priority\" stamp on the photo and put it on the Boss's desk", price: 10}
+
+  
 ])
