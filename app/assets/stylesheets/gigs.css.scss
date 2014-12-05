@@ -73,7 +73,7 @@
 
 
 .order-now {
-  background-color: #3eabfa;
+  background-color: #3EABFA;
   border: 1px solid #3E8FFA;
 //  background-color: #00b22d;
 //  border: 1px solid #028a25;
@@ -82,6 +82,12 @@
   color: #FFFFFF;
   border-radius: 3px;
   width: 225px;
+}
+
+button.btn-custom-primary, button.btn-custom-primary:hover {
+  background-color: #3EABFA;
+  border: 1px solid #3E8FFA;
+  color: white;
 }
 
 .order-now.large-btn {

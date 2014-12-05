@@ -54,6 +54,7 @@
 
 .profile-box {
   background-color: #FFFFFF;
+  border: 1px solid #dddddd;
   text-align: left;
   width: 90%;
   margin: 0 auto;
@@ -87,4 +88,8 @@
 
 .users-show-wrapper {
   color: #555555;
+}
+
+.btn-wrapper {
+  padding-top: 15px;
 }
