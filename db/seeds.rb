@@ -15,7 +15,7 @@ Gig.create!([
 GigExtra.create!([
   {gig_id: 1, title: "I will create a snapchat account for you so you can get started", price: 5},
   {gig_id: 1, title: "I will tell them happy birthday inside a Maserati GranTurismo", price: 25},
-  {gig_id: 1, title: "I will tell them happy birthday in Spanish", price: 5}
+  {gig_id: 1, title: "I will tell them happy birthday in Spanish", price: 5},
   {gig_id: 2, title: "I will play the guitar in the background", price: 5}
 ])
 
