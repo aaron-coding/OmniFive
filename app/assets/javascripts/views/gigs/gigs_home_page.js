@@ -8,7 +8,21 @@ Gigrr.Views.GigsHomePage = Backbone.CompositeView.extend({
   },
   
   guestLogin: function(){
-    alert("guest login! w00t");
+    
+    $.ajax({
+      type: "POST",
+      url: "/session",
+      data: {
+        'user': {
+          'username': 'Aaron',
+          'password': 'aaron'
+        }
+      },
+      success: function(){
+        location.reload(); // refresh page to render new data.
+      }
+    });
+    
   },
   
   render: function(){

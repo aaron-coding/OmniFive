@@ -169,6 +169,10 @@ nav.navbar {
   border-radius: 0px;
 }
 
+nav.navbar .navbar-brand{
+  color: #FFFFFF;
+}
+
 footer {
   border-top: 1px #e5e5e5 solid;
   background-color: #FFFFFF;
@@ -224,7 +228,7 @@ footer ul {
 #splash {
   width: 100%;
   margin-top: -20px;
-  min-height: 1000px;
+  min-height: 850px;
   background-image: url("/assets/OmniFive-Splash-Image-cropped.jpg");
 }
 
@@ -232,8 +236,8 @@ footer ul {
   position: absolute;
   background: rgba(200,200,200,0.78);
   top: 35%;
-  left: 20%;
-  width: 60%;
+  left: 25%;
+  right: 25%;
   display: inline;
   border-radius: 8px;
   padding: 30px;
@@ -249,9 +253,13 @@ footer ul {
 
 .home-button-container {
   text-align: left;
-  margin-top: 15px;
 }
+
 .home-button-container button {
-  margin-right: 20px;
+  margin: 15px 20px 0px 0px;
   font-size: 18px;
+}
+
+.theme-blue {
+  color: #3E8FFA;
 }
