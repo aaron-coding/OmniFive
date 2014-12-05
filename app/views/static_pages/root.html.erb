@@ -2,7 +2,16 @@
   <main role="main">
   </main>
 <% else %>
-  <h1> Please Sign in, click above. </h1>
+  <div id="splash">
+    <h1> Please Sign in, click above. </h1>
+    <script>
+    var replaceWrapper = function(){
+      console.log("woah");
+      $("#main-wrapper").css("width", "100%")
+      $("#main-wrapper").css("margin", "-20px 0px -20px 0px")
+    }();
+    </script>
+  </div>
 <% end %>
 
 

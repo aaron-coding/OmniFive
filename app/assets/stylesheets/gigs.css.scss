@@ -1,7 +1,7 @@
 .gigs-index-item {
   width: 25%;
   float: left;
-  padding-right: 20px;
+  padding: 0px 0px 20px 10px;
   min-width: 160px; 
 }
 
@@ -29,6 +29,7 @@
   cursor: pointer;  //This is clickable, akin to anchor tag
   background-color: white;
   position: relative;
+  border: 1px #dddddd solid;
 }
 
 .gig-price strong{
