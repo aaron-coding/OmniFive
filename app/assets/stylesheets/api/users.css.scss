@@ -43,11 +43,48 @@
 }
 
 .medium-thumb {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
 }
 
 .input-wrap button.valign-top {
   vertical-align: top;
+}
+
+.profile-box {
+  background-color: #FFFFFF;
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+.profile-box-wrapper {
+  margin: 0px 10px;
+}
+
+.users-show-wrapper .gigs-index-item{
+  padding: 0px 10px;
+}
+
+.rounded-corners {
+  border-radius: 5px;
+}
+
+.profile-username {
+  padding-bottom: 15px;
+//  float: left;
+}
+
+.user-desc {
+  vertical-align: top;
+  padding: 20px 0px 0px 20px;
+  
+//  padding-left: 250px;
+//  min-height: 200px;
+}
+
+.users-show-wrapper {
+  color: #555555;
 }

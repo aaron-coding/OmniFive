@@ -1,7 +1,7 @@
 Gigrr.Views.UsersShow = Backbone.CompositeView.extend({
 
   template: JST['users/show'],
-  
+  className: "users-show-wrapper",
   initialize: function(){
     this.listenTo(this.model, "sync", this.render);
   },

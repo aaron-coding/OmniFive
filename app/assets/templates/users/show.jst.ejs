@@ -1,8 +1,23 @@
-<h2><%= user.escape("username") %></h2>
-<div class="user-desc"><%= user.escape("creator_desc")%> </div>
+<div class="profile-box-wrapper">
+  <div class="profile-box">
+    <table> 
+      <tbody>
+        <tr>
+          <td class="user-avatar"> 
+            <img src="<%= user.escape('image_url')%>" class="rounded-corners medium-thumb">
+          </td>
 
-<div class="user-avatar"> 
-  <img src="<%= user.escape('image_url')%>" class="img-circle medium-thumb">
+          <td class="user-desc">
+            <h2 class="profile-username"><%= user.escape("username") %></h2>
+            <%= user.escape("creator_desc")%> 
+            <div class="btn-wrapper">
+              <button class="btn btn-primary">Contact</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <h3><%= user.escape("username") %>&#8217;s gigs</h3>
