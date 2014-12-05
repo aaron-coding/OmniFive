@@ -1,18 +1,18 @@
-<h1>Log in </h1>
-<form action="<%= session_url %>" method="POST"> 
-
-  <input type="hidden"
-    name="authenticity_token"
-    value="<%= form_authenticity_token %>">
+<div id="main-wrapper">
+  <h1>Log in </h1>
+  <form action="<%= session_url %>" method="POST"> 
+    <input type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>">
     
-  <label for="username">Username: </label>
-    <input type="text"
-      name="user[username]">
+    <label for="username">Username: </label>
+      <input type="text"
+        name="user[username]">
       
-  <label for="password">Password: </label>
-    <input type="password"
-      name="user[password]">
+    <label for="password">Password: </label>
+      <input type="password"
+        name="user[password]">
       
-  <input type="submit" value="Log in">
-    
-</form>
+    <input type="submit" value="Log in">
+  </form>
+</div>

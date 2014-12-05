@@ -12,7 +12,6 @@ Gigrr.Routers.Router = Backbone.Router.extend({
     "users/:id": "usersShow",
     "users/:id/edit": "usersEdit",
     "orders/:id": "ordersShow"
-
   },
   
   homePage: function() {

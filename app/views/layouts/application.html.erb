@@ -16,14 +16,13 @@
 <body>
   <div class="page-wrap">
     <%= render 'layouts/navbar' %>  
-    <div id="main-wrapper">
+
 
       <% if flash[:errors] %>
         <%= render 'layouts/errors' %>
       <% end %>
 
       <%= yield %>
-    </div>    
   </div>
   
   <%= render 'layouts/footer' %>

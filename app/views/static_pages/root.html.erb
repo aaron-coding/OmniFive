@@ -1,17 +1,23 @@
 <% if logged_in? %>
-  <main role="main">
-  </main>
-<% else %>
-  <div id="splash">
-    <h1> Please Sign in, click above. </h1>
-    <script>
-    var replaceWrapper = function(){
-      console.log("woah");
-      $("#main-wrapper").css("width", "100%")
-      $("#main-wrapper").css("margin", "-20px 0px -20px 0px")
-    }();
-    </script>
+  <div id="main-wrapper">
+    <main role="main">
+    </main>
   </div>
+<% else %>
+
+  <div id="splash">
+    <div id="splash-msg">
+      <h1> Don't throw your money away. </h1>
+      <h2>Use OmniFive to get great deals for <strong>just $5</strong></h2>
+      <button class="btn btn-custom-primary guest-login">Guest Login</div>
+    </div>
+  </div>    
+    $(".guest-login").click(function(){
+      alert("guest login!");
+      
+    });
+    
+    </script>
 <% end %>
 
 
