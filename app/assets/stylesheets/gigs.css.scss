@@ -98,13 +98,22 @@
 
 .extras-row td {
   padding: 15px 15px 15px 0;
-  font-size: 16px;
+
   line-height: 18px;
   color: #555555;
   vertical-align: top;
   border-bottom: 1px #dddddd solid;
 }
+.extras-row td, .gig-show-details-body {
+  font-size: 16px;
+  color: #0e0e0f;
+}
 
+.gig-show-details-body {
+  padding: 20px;
+  line-height: 22px;
+  text-align: left;
+}
 
 
 .order-button-container {
@@ -196,21 +205,16 @@ td input[type="checkbox"] {
   object-fit: cover;
 }
 
-.gig-show-details-body {
-  padding: 20px;
-  color: #0e0e0f;
-  font-size: 15px;
-  line-height: 22px;
+.gig-extra-title {
   text-align: left;
+  width: 492px;
 }
+
 
 .gig-title + .gig-show-details-body{
   padding: 20px 0px;
 }
 
-.gig-extra-title {
-  text-align: left;
-}
 
 
 .creator-details {
