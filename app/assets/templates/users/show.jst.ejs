@@ -20,6 +20,8 @@
   </div>
 </div>
 
-<h3><%= user.escape("username") %>&#8217;s gigs</h3>
-<div class="gigs-index">
-</div>
+<% if (user.gigs().length > 0) { %>
+  <h3><%= user.escape("username") %>&#8217;s gigs</h3>
+  <div class="gigs-index">
+  </div>
+<% } %>
