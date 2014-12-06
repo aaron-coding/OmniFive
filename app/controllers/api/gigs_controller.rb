@@ -11,6 +11,7 @@ class Api::GigsController < ApplicationController
   
   def create
     @gig = current_user.gigs.new(gig_params)
+    @gig.price = 5
     if @gig.save 
       render json: @gig
     else 
@@ -21,7 +22,7 @@ class Api::GigsController < ApplicationController
   private
   
   def gig_params
-    params.require(:gig).permit(:price, :description, :image_url, :title)
+    params.require(:gig).permit(:description, :image_url, :title)
   end
   
 end
