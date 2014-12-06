@@ -9,4 +9,19 @@ class Api::GigsController < ApplicationController
     render :show
   end
   
+  def create
+    @gig = current_user.gigs.new(gig_params)
+    if @gig.save 
+      render json: @gig
+    else 
+      render json: @gig.errors.full_messages, status: :unprocessable_entity
+    end  
+  end
+  
+  private
+  
+  def gig_params
+    params.require(:gig).permit(:price, :description, :image_url, :title)
+  end
+  
 end

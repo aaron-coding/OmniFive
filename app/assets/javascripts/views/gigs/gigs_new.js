@@ -1,6 +1,6 @@
-Gigrr.Views.UsersEdit = Backbone.CompositeView.extend({
+Gigrr.Views.GigsNew = Backbone.View.extend({
 
-  template: JST['users/edit'],
+  template: JST['gigs/new'],
   className: "gig-form",
   initialize: function(){
     this.listenTo(this.model, "sync", this.render);
@@ -8,7 +8,7 @@ Gigrr.Views.UsersEdit = Backbone.CompositeView.extend({
   
   events: {
     "submit form": "handleSubmit",
-    "change input[type=filepicker]": "updateAvatar"
+    "change input[type=filepicker]": "updateImage"
   },
   
   handleSubmit: function(event){
@@ -21,24 +21,25 @@ Gigrr.Views.UsersEdit = Backbone.CompositeView.extend({
     this.model.set($(event.currentTarget).serializeJSON({ parseWithFunction: ignoreEmpty }))
     this.model.save({}, {
       success: function(){
-        // $('.gig-form').prepend('<p class="bg-success">Profile Saved!</p>');
-        alert("Profile Succesfully saved!")
+        alert("Gig Succesfully saved!")
       },
       error: function(){
-        alert("Profile not saved")
+        alert("Gig not saved")
       }
     })
   },
   
-  updateAvatar: function(event){
-    var newAvatar = $(event.currentTarget).serializeJSON().user.image_url;
-    this.$el.find(".small-thumb").attr('src', newAvatar);
+  updateImage: function(event){
+    var newImage = $(event.currentTarget).serializeJSON().gig.image_url;
+    this.$el.find(".small-thumb").attr('src', newImage);
   },
   
   render: function(){
-    var renderedContent = this.template({ user: this.model });
+    var renderedContent = this.template({ gig: this.model });
     this.$el.html(renderedContent);
-    filepicker.constructWidget(this.$('.fp-tagged'));    
+    if ( !$("fp-button") ) { //only construct widget if it isn't there.
+      filepicker.constructWidget(this.$('.fp-new-gig'));   
+    }
     return this;
   },
   

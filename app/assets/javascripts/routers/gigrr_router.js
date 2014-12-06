@@ -8,6 +8,7 @@ Gigrr.Routers.Router = Backbone.Router.extend({
   
   routes: {
     "": "homePage",
+    "gigs/new": "gigsNew",
     "gigs/:id": "gigsShow",
     "users/:id": "usersShow",
     "users/:id/edit": "usersEdit",
@@ -52,6 +53,14 @@ Gigrr.Routers.Router = Backbone.Router.extend({
     var order = this.orders.getOrFetch(id);
     var ordersShowView = new Gigrr.Views.OrdersShow({ model: order });
     this._swapView(ordersShowView);  
+  },
+  
+  gigsNew: function(){
+    $('.navbar-nav.nav li').removeClass('active');
+    var newGig = new Gigrr.Models.Gig();
+    var newGigView = new Gigrr.Views.GigsNew({ model: newGig });
+    this._swapView(newGigView); 
+
   },
   
   _swapView: function(view){

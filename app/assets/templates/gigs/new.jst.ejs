@@ -1,0 +1,64 @@
+<h1> Make a new Gig </h1>
+<form> 
+  <div class="gig-form-row">
+    <div class="label-wrap">
+      <label for="title">Title: </label>
+    </div>
+    
+    <div class="input-wrap"> 
+      <input type="text"
+        name="gig[title]"
+        id="title">
+    </div>
+  </div>
+
+
+  <div class="gig-form-row">
+    <div class="label-wrap">
+      <label for="description">Detailed description: </label><br>
+    </div>
+
+    <div class="input-wrap"> 
+      <textarea name="gig[description]" id="description"></textarea>
+    </div>
+
+  </div>
+
+  <div class="gig-form-row">
+    <div class="label-wrap">
+      <label for="price">Price: </label><br>
+    </div>
+
+    <div class="input-wrap"> 
+      <input 
+        type="text"
+        name="gig[price]" 
+        id="price">
+    </div>
+
+  </div>
+
+  <div class="gig-form-row">
+    <div class="label-wrap">
+      <label for="fp-user-image">Choose an image for your gig</label>
+    </div>
+    <div class="input-wrap"> 
+    <img src="/assets/default-avatar.jpg" class="small-thumb img-circle">
+
+      <input
+        type="filepicker"
+        class="fp-new-gig"
+        data-fp-mimetype="image/*"
+        name="gig[image_url]"
+        data-fp-button-text="Upload Image"
+        data-fp-button-class="btn btn-default valign-top fp-button">
+
+    </div>
+
+  </div>
+  <div class="gig-form-row">
+   <input type="submit" value="Make new Gig" class="btn btn-primary primary-submit">
+  </div>
+
+</form>
+
