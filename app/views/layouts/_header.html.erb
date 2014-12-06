@@ -1,0 +1,167 @@
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="loginModalLabel">Log in</h4>
+      </div>
+      
+      <div class="modal-body">
+        <form action="<%= session_url %>" method="POST" role="form"> 
+          <input type="hidden"
+            name="authenticity_token"
+            value="<%= form_authenticity_token %>">
+
+          <div class="form-group">
+            <label for="username">Username: </label>
+            <input type="text"
+              name="user[username]"
+              id="username"
+              class="form-control">
+          </div>
+        
+          <div class="form-group">
+            <label for="password">Password: </label>
+            <input type="password"
+              name="user[password]"
+              class="form-control"
+              id="password">
+          </div>
+          
+          <input type="submit" class="btn btn-primary" value="Log in">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End Login Modal -->
+
+
+<!-- Signup Modal -->
+
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="signUpModalLabel">Sign up</h4>
+      </div>
+      
+      <div class="modal-body">
+        
+        <form action="<%= users_url %>" method="POST" role="form"> 
+
+          <input type="hidden"
+            name="authenticity_token"
+            value="<%= form_authenticity_token %>">
+          
+          <div class="form-group">
+            <label for="username">Username: </label>
+            <input type="text"
+              name="user[username]"
+              id="username"
+              class="form-control">
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Password: </label>
+            <input type="password"
+              name="user[password]"
+              id="password"
+              class="form-control">
+          </div>
+          <input type="submit" class="btn btn-primary" value="Sign Up">
+        </form>
+
+    
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End Signup Modal -->
+
+
+
+
+
+
+
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="<%= logged_in? ? "#" : "/" %>"><span class="theme-blue">Omni</span>Five <sup>&#169;</sup></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li id="home-tab"><a href="<%= logged_in? ? "#" : "/" %>">Home <span class="sr-only">(current)</span></a></li>
+        <!-- <li><a href="#">Link</a></li> -->
+        <!-- <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li> -->
+      </ul>
+      <!-- <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form> -->
+      <ul class="nav navbar-nav navbar-right">
+        
+        <% if logged_in? %>
+          <li id="edit-user-tab"><a href="#/users/<%= current_user.id %>/edit">Edit profile</a></li>
+          <li id="current-user-tab"><a href="#/users/<%= current_user.id %>">Currently logged in as <%= current_user.username %></a></li>
+        <li><%= button_to "Log out", session_url, method: "delete", class: "btn btn-default navbar-btn" %></li>
+          <!-- <%= button_to "Delete Account", user_url(current_user.id), method: "delete" %> -->
+        <% else %>
+        <li data-toggle="modal" 
+          data-target="#signupModal"><a href="#">Sign up</a></li>
+        
+        <li data-toggle="modal" 
+          data-target="#loginModal"><a href="#">Log in</a></li>
+
+        <% end %>
+        
+
+        
+        
+        <!-- <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li> -->
+        
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<% if flash[:errors] %>
+  <%= render 'layouts/errors' %>
+<% end %>
