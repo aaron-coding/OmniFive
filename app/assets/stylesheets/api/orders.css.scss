@@ -7,11 +7,9 @@
   border: 1px solid #dddddd;
   padding: 15px;
   border-radius: 10px;
-  width: 660px;
-  margin-right: 350px;
 }
 
-.thank-you-box h2{
+.theme-blue-light{
   color: #3eabfa;
 }
 
@@ -19,4 +17,36 @@
   color: black;
   font-size: 20px;
   margin: 10px 0px;
+}
+
+.orders-show {
+  width: 660px;
+  margin-right: 350px;
+}
+
+.orders-show::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.thank-you-box {
+  width: 100%;
+  float: left;
+}
+
+.sidebar-creator {
+  width: 325px;
+  margin-right: -375px;
+  margin-left: 25px;
+  float: left;
+}
+
+.orders-show .creator-details {
+  text-align: center;
+  padding: 15px 15px 5px 15px;
+}
+
+.orders-show h3 {
+  margin-top: 0px;
 }

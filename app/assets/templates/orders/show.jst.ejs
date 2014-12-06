@@ -1,4 +1,4 @@
-<div class="thank-you-box">
+<div class="thank-you-box theme-blue-light">
   <h2><strong>Thank you</strong>, your order has been placed.</h2>
 
   <p>Order Confirmation: <strong>#<%= Number(order.escape("id")) + 340293 %></strong></p>
@@ -26,11 +26,22 @@
       
   <% if (order.gig().escape('image_url')) { %>
     <img src="<%= order.gig().escape('image_url')%>/convert?w=600&h=400&fit=crop">
+  <% } %>  
+</div>  
+<section class="sidebar-creator sidebar-section creator-details">
+  <% if (order.gig().get("creator")) { %>
+    <% var creator = order.gig().get("creator") %>
+    <div class="sub-section">
+      <h3 class="theme-blue-light">Seller Information</h3>
+      <img src="<%= creator.image_url %>" class="small-thumb img-circle">
+      <h4><a href="#users/<%= creator.id %>"><%= creator.username %></a></h4>
+      <small>OmniFive Top Seller</small>
+    </div>
+    <div class="sub-section-description">
+     <%= creator.creator_desc %>
+    </div>
   <% } %>
-</div>
-
-
-
+</section>
 
   
 
