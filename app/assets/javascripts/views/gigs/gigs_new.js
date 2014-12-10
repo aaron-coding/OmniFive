@@ -39,12 +39,9 @@ Gigrr.Views.GigsNew = Backbone.View.extend({
     var renderedContent = this.template({ gig: this.model });
     this.$el.html(renderedContent);
     //only construct widget if it isn't there.
-    // if ( $(".fp-button").length === 0 ) { 
-      filepicker.constructWidget(this.$('.fp-new-gig'));   
+        filepicker.constructWidget(this.$('.fp-new-gig'));                   
     // }
     return this;
-  },
-  
-  
+  },  
   
 });
