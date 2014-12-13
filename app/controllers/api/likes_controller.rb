@@ -1,6 +1,6 @@
 class Api::LikesController < ApplicationController
   def create
-    like = Like.new(params[:gig_id])
+    like = Like.create(gig_id: like_params[:gig_id])
     like.user_id = current_user.id
     if like.save
       render json: like
@@ -10,7 +10,9 @@ class Api::LikesController < ApplicationController
   end
   
   def destroy
-    like = Like.find()
+    like = Like.find_by(user: current_user, gig_id: params[:gig_id])
+    like.destroy
+    render json: like
   end
   
   private

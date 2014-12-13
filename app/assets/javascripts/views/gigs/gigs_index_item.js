@@ -8,7 +8,27 @@ Gigrr.Views.GigsIndexItem = Backbone.View.extend({
   },
   
   events: {
+    "click .gig-like": "toggleLike",
     "click .inner-gig-index": "navigateToGigUrl"
+  },
+  
+  toggleLike: function(event){
+    console.log(this.model.id);
+    
+    $.ajax({
+      type: "POST",
+      url: "/api/likes",
+      data: {
+        'like': {
+          'gig_id': this.model.id
+        }
+      },
+      success: function(){
+        alert("Like Saved!")
+      }
+    });
+    
+    event.stopPropagation();
   },
   
   navigateToGigUrl: function(event){

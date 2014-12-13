@@ -1,12 +1,17 @@
 <div class="inner-gig-index">
 
+  <div class="inner-gig-image-wrapper">
 
-<span class="gig-price">
-  <strong class="gig-index-order">Order</strong>
-  <strong>$<%= gig.escape("price")%></strong>
-</span>
+    <span class="gig-price">
+      <strong class="gig-index-order">Order</strong>
+      <strong>$<%= gig.escape("price")%></strong>
+    </span>
 
+    <span class="gig-like">
+      <aside class="gig-index-heart"><i class="fa fa-heart"></i></aside>
+    </span>
 
-  <img src="<%= gig.get('image_url')%>/convert?w=215&h=215&fit=crop">
+    <img src="<%= gig.get('image_url')%>/convert?w=215&h=215&fit=crop">
+  </div>
   <h3><%= gig.escape("title") %></h3>
 </div>

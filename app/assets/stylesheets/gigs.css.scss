@@ -280,3 +280,28 @@ td input[type="checkbox"] {
   width: 1010px; //disable to give gig index items varied with, inherited
   margin: 0 auto;
 }
+
+.gig-like {
+  position: absolute;
+  bottom: 20px;
+  right: -3px;
+  
+}
+
+.gig-index-heart{
+  width: 28px;
+  height: 28px;
+  color: red;
+  border-radius: 5px;
+  padding-top: 4px;
+}
+
+.gig-index-heart:hover {
+  background-color: gray; 
+//  border: 1px black solid;
+}
+
+.inner-gig-image-wrapper {
+  position: relative;
+}
+
