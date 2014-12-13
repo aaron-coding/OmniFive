@@ -9,10 +9,6 @@ Gigrr.Views.GigsShow = Backbone.CompositeView.extend({
   },
   
   render: function(){
-    // if (!this.model.creator()) {
-    //   this.$el.html("<div'>Loading...</div>")
-    //   return this;
-    // }
     var renderedContent = this.template({ gig: this.model });
     this.$el.html(renderedContent);
     this.addGigExtrasIndex();
