@@ -20,13 +20,14 @@ Gig.create!([
   {title: "I will save you from any villain", creator_id: 4, price: 5, image_url: "https://www.filepicker.io/api/file/4jsm66tRS0WQkKNvlWfr", description: "It can be pretty dangerous around here and there are always more than one person in danger. I will try and save everyone but, if you buy this gig, you'll be on the top of the priorty list."},
   {title: "I will have my dog tell you \"I love you\"", creator_id: 5, price: 5, image_url: "https://www.filepicker.io/api/file/D2kVoc6VRanRTPNScqn0", description:"My dog, Mishka, is famous and is very articulate, he can speak anything that I teach him. I can have him say \"I love you\" to you."},
   {title: "I will save you money by finding the best deal for you", creator_id: 6, price: 5, image_url: "https://www.filepicker.io/api/file/l5h8ZmMT9up2DNQHGeaQ", description:"Don't get fooled by \"Sales\" many times they are not actually on sale. In fact, some stores even raise prices of things for a day, to then bring it down to a \"Sale.\" I will find you real deals."},
-  
   {title: "I will give you legal advice", creator_id: 7, price: 5, image_url: "https://www.filepicker.io/api/file/HV6qG1v0SqO13hk8pTal", description:"I can advise you legally in any situation, this valuable service can cost hundreds, if not thousands, of dollars, but I have enough money to go around so I can want to make this accessible to anyone."},
   {title: "I will make a short rap about you", creator_id: 3, price: 5, image_url: "https://www.filepicker.io/api/file/DHwGAtu7QGuDJlpONvLg", description:"I can dish out a rap about you. All I need to know is a couple of things about you and what you stand for."},
   {title: "I will mention your name in my next rap battle", creator_id: 3, price: 5, image_url: "https://www.filepicker.io/api/file/tlJobnnTS9ZkDANMrvMq", description: "In my next rap battle I will make a metaphor in your name talking about some quality you possess. These get recorded and shown to hundreds."},
   {title: "I will add your name to my Tupac Shrine", creator_id: 3, price: 5, image_url: "https://www.filepicker.io/api/file/JHG9cSdCT46e56AsykeA", description: "I have a shrine to honor Tupac Shakur, and can include your name in a piece of paper that will reside there forevermore. I can also say a prayer for him in your name."},
-  {title: "I will submit your photo to the Daily Bugle", creator_id: 4, price: 5, image_url: "https://www.filepicker.io/api/file/CaYkCKfR0OGt87IbUWt4", description: "Because I've been so successful taking pictures of myself in the Spidey suit, I have special access to submit photos to the Daily Bugle directly. I can submit your picture for just $5"}
-  
+  {title: "I will submit your photo to the Daily Bugle", creator_id: 4, price: 5, image_url: "https://www.filepicker.io/api/file/CaYkCKfR0OGt87IbUWt4", description: "Because I've been so successful taking pictures of myself in the Spidey suit, I have special access to submit photos to the Daily Bugle directly. I can submit your picture for just $5"},
+  {title: "I will pick an outift for you matching a celeb photo", creator_id: 6, price: 5, image_url: "https://www.filepicker.io/api/file/xlbAvsjGQ7Te80CyT6vg", description: "you show me a picture of any celebrity and I will find the entire outfit for you to purchase online. These sometimes can be very hard to figure out but I know all of the styles and brands and can match anything, even up to what exact ring the celeb is wearing."},
+  {title: "I will draw you in cartoon form", creator_id: 2, price: 5, image_url: "https://www.filepicker.io/api/file/NB2cS44qS9OxD7x0CXhG", description: "You send me a picture of yourself and I will draw you in caricature form. I have drawn over 500 people in the past. For a little extra I can draw you and you family together."},  
+  {title: "I will do a security analysis of your website", creator_id: 1, price: 5, image_url: "https://www.filepicker.io/api/file/P6BbUAt4SkqTfTqk5lmD", description: "I will do a full security analysis of your website including reports on the most common vulnerabilities. I will check your site for Cross-site Scripting, SQL Injection attacks and HTML injection attacks."}
 ])
 
 GigExtra.create!([
@@ -59,7 +60,13 @@ GigExtra.create!([
   {gig_id: 13, title: "I will give you the recording of the rap battle", price: 10},
   {gig_id: 14, title: "I will say a prayer at the shrine in your name", price: 5},
   {gig_id: 15, title: "I will give my own personal pitch for the photo", price: 15},
-  {gig_id: 15, title: "I will put a \"Priority\" stamp on the photo and put it on the Boss's desk", price: 10}
-
-  
+  {gig_id: 15, title: "I will put a \"Priority\" stamp on the photo and put it on the Boss's desk", price: 10},
+  {gig_id: 16, title: "I will match all of the celeb\'s jewelry items.", price: 10},
+  {gig_id: 16, title: "I will add an extra item that will give you more flair", price: 10},  
+  {gig_id: 17, title: "I will draw a full group of up to 5 people", price: 20},
+  {gig_id: 17, title: "I will draw your pet if included in the picture", price: 10},
+  {gig_id: 17, title: "I will draw a background themed to any time of the year", price: 5},
+  {gig_id: 18, title: "I will include a report with specifics on how to fix each vulnerability", price: 10},
+  {gig_id: 18, title: "I will give you a 15 minute skype interview explaining how to prevent future vulnerabilities", price: 5},
+    
 ])
