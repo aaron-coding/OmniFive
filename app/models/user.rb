@@ -33,6 +33,8 @@ class User < ActiveRecord::Base
     primary_key: :id
   )
   
+  has_one :like
+  
   def password
     @password
   end 

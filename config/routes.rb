@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :gigextras, only: [:create, :update, :destroy]
     resources :users, only: [:show, :update]
     resources :orders, only: [:create, :show]
+    resources :likes, only: [:create, :destroy]
   end
   
   
