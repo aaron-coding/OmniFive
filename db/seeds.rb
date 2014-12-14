@@ -10,7 +10,7 @@ User.create!([
 ])
 
 Gig.create!([
-  {title: "I will send a personalized happy birthday snapchat on your behalf", creator_id: 1, price: 5, image_url: "https://www.filepicker.io/api/file/FsHUUYAQROOJsJkAd1q9", description: "Sending a birthday wish is considered an act of love and kindness. However, in some cases people don't pick up their phone or check their emails in order to receive their birthday wishes. I will gladly send a Snapchat to the loved one of your choice. Snapchat users are very famous for always checking their snapchats, there are no 'over-full' inboxes."},
+  {title: "I will draw you in cartoon form", creator_id: 2, price: 5, image_url: "https://www.filepicker.io/api/file/NB2cS44qS9OxD7x0CXhG", description: "You send me a picture of yourself and I will draw you in caricature form. I have drawn over 500 people in the past. For a little extra I can draw you and you family together."},  
   {title: "I will sing hey there Delilah, customized to your name", creator_id: 1, price: 5, image_url: "https://www.filepicker.io/api/file/N3UbKSJJS9ygMwR9E3as", description: "I will sing hey there Delilah, customized to your name"},
   {title: "I will add Google Maps to your existing website", creator_id: 1, price: 5, image_url: "https://www.filepicker.io/api/file/LUdINzJsRYqbfMSqKpak", description: "I will add Google Maps to your existing website"},
   {title: "I will write a glorious short story based on your life", creator_id: 1, price: 5, image_url: "https://www.filepicker.io/api/file/r2Kll5yQse9w0DYpfZ4G", description: "The story is 250 words long by default, but I can make it longer with gig extras. I also need events in your life that you are proud of so I can write about them. I can use names of friends and relatives in your life or I can make the names up."},
@@ -26,15 +26,15 @@ Gig.create!([
   {title: "I will add your name to my Tupac Shrine", creator_id: 3, price: 5, image_url: "https://www.filepicker.io/api/file/JHG9cSdCT46e56AsykeA", description: "I have a shrine to honor Tupac Shakur, and can include your name in a piece of paper that will reside there forevermore. I can also say a prayer for him in your name."},
   {title: "I will submit your photo to the Daily Bugle", creator_id: 4, price: 5, image_url: "https://www.filepicker.io/api/file/CaYkCKfR0OGt87IbUWt4", description: "Because I've been so successful taking pictures of myself in the Spidey suit, I have special access to submit photos to the Daily Bugle directly. I can submit your picture for just $5"},
   {title: "I will pick an outift for you matching a celeb photo", creator_id: 6, price: 5, image_url: "https://www.filepicker.io/api/file/xlbAvsjGQ7Te80CyT6vg", description: "you show me a picture of any celebrity and I will find the entire outfit for you to purchase online. These sometimes can be very hard to figure out but I know all of the styles and brands and can match anything, even up to what exact ring the celeb is wearing."},
-  {title: "I will draw you in cartoon form", creator_id: 2, price: 5, image_url: "https://www.filepicker.io/api/file/NB2cS44qS9OxD7x0CXhG", description: "You send me a picture of yourself and I will draw you in caricature form. I have drawn over 500 people in the past. For a little extra I can draw you and you family together."},  
+  {title: "I will send a happy birthday snapchat on your behalf", creator_id: 1, price: 5, image_url: "https://www.filepicker.io/api/file/FsHUUYAQROOJsJkAd1q9", description: "Sending a birthday wish is considered an act of love and kindness. However, in some cases people don't pick up their phone or check their emails in order to receive their birthday wishes. I will gladly send a Snapchat to the loved one of your choice. Snapchat users are very famous for always checking their snapchats, there are no 'over-full' inboxes."},
   {title: "I will do a security analysis of your website", creator_id: 1, price: 5, image_url: "https://www.filepicker.io/api/file/P6BbUAt4SkqTfTqk5lmD", description: "I will do a full security analysis of your website including reports on the most common vulnerabilities. I will check your site for Cross-site Scripting, SQL Injection attacks and HTML injection attacks."}
 ])
 
 GigExtra.create!([
-  {gig_id: 1, title: "I will create a snapchat account for you so you can get started", price: 5},
-  {gig_id: 1, title: "I will record the snapchat inside a Maserati GranTurismo", price: 25},
-  {gig_id: 1, title: "I will sing the entire happy birthday song in the 10 seconds allotted by snapchat", price: 10},
-  {gig_id: 1, title: "I will say happy birthday in the language of your choice (default is english)", price: 5},
+  {gig_id: 17, title: "I will create a snapchat account for you so you can get started", price: 5},
+  {gig_id: 17, title: "I will record the snapchat inside a Maserati GranTurismo", price: 25},
+  {gig_id: 17, title: "I will sing the entire happy birthday song in the 10 seconds allotted by snapchat", price: 10},
+  {gig_id: 17, title: "I will say happy birthday in the language of your choice (default is english)", price: 5},
   {gig_id: 2, title: "I will play a guitar in the background", price: 5},
   {gig_id: 2, title: "I will record the video on a night-time background with the stars showing", price: 5},
   {gig_id: 3, title: "I will add the map to your site in under 5 hours", price: 15},
@@ -63,9 +63,9 @@ GigExtra.create!([
   {gig_id: 15, title: "I will put a \"Priority\" stamp on the photo and put it on the Boss's desk", price: 10},
   {gig_id: 16, title: "I will match all of the celeb\'s jewelry items.", price: 10},
   {gig_id: 16, title: "I will add an extra item that will give you more flair", price: 10},  
-  {gig_id: 17, title: "I will draw a full group of up to 5 people", price: 20},
-  {gig_id: 17, title: "I will draw your pet if included in the picture", price: 10},
-  {gig_id: 17, title: "I will draw a background themed to any time of the year", price: 5},
+  {gig_id: 1, title: "I will draw a full group of up to 5 people", price: 20},
+  {gig_id: 1, title: "I will draw your pet if included in the picture", price: 10},
+  {gig_id: 1, title: "I will draw a background themed to any time of the year", price: 5},
   {gig_id: 18, title: "I will include a report with specifics on how to fix each vulnerability", price: 10},
   {gig_id: 18, title: "I will give you a 15 minute skype interview explaining how to prevent future vulnerabilities", price: 5},
     
