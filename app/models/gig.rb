@@ -32,6 +32,7 @@ class Gig < ActiveRecord::Base
   has_many :likes
   
   def liked_by?(user)
+    return false if user.nil?
     likes.any? { |like| like.user_id == user.id }
   end
    
