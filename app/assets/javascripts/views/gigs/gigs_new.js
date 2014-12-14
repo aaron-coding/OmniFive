@@ -1,7 +1,9 @@
 Gigrr.Views.GigsNew = Backbone.View.extend({
 
   template: JST['gigs/new'],
+  
   className: "gig-form",
+  
   initialize: function(){
     this.listenTo(this.model, "sync", this.render);
   },
@@ -38,9 +40,7 @@ Gigrr.Views.GigsNew = Backbone.View.extend({
   render: function(){
     var renderedContent = this.template({ gig: this.model });
     this.$el.html(renderedContent);
-    //only construct widget if it isn't there.
-        filepicker.constructWidget(this.$('.fp-new-gig'));                   
-    // }
+    filepicker.constructWidget(this.$('.fp-new-gig'));                   
     return this;
   },  
   

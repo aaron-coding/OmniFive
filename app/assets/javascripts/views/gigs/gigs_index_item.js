@@ -1,9 +1,15 @@
 Gigrr.Views.GigsIndexItem = Backbone.View.extend({
 
   template: JST['gigs/index_item'],
+  
   className: 'gigs-index-item',
+  
   initialize: function(){
     this.listenTo(this.model, "sync", this.render);
+    this.liked = false;
+    if (this.model.liked()) {
+      this.liked = true;
+    }
     this.$el.attr("data-href", "#gigs/" + this.model.get("id"));
   },
   
@@ -13,22 +19,30 @@ Gigrr.Views.GigsIndexItem = Backbone.View.extend({
   },
   
   toggleLike: function(event){
-    console.log(this.model.id);
-    
+    event.stopPropagation();
+    var curTarget = $(event.currentTarget);   
+    var typeToUse = this.liked ? "DELETE" : "POST";
+    var that = this;
     $.ajax({
-      type: "POST",
-      url: "/api/likes",
+      type: typeToUse,
+      url: "/api/likes", //custom destroy defined to not to require id
       data: {
-        'like': {
-          'gig_id': this.model.id
-        }
+        'like': { 'gig_id': this.model.id }
       },
       success: function(){
-        alert("Like Saved!")
+        that.toggleCallback(curTarget);
       }
     });
-    
-    event.stopPropagation();
+  },
+  
+  toggleCallback: function(curTarget){
+    if (this.liked){
+      curTarget.removeClass('liked');
+      this.liked = false;
+    } else {
+      curTarget.addClass('liked');      
+      this.liked = true;
+    }
   },
   
   navigateToGigUrl: function(event){

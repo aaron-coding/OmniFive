@@ -5,6 +5,6 @@ class Like < ActiveRecord::Base
   belongs_to :gig
   belongs_to :user
   
-  
+  # scope :own_likes, -> { where(user: current_user) }
   
 end

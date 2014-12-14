@@ -13,6 +13,10 @@ Gigrr.Models.Gig = Backbone.Model.extend({
   
     return this._extras;
   },
+  
+  liked: function(){
+    return this._liked;
+  },
 
   parse: function(response){
     if (response.gigextras){
@@ -25,7 +29,16 @@ Gigrr.Models.Gig = Backbone.Model.extend({
       this._creator = new Gigrr.Models.User(response.creator, {parse: true});
       delete response.creator;
     }
-  
+    
+    if (response.is_liked){
+      this._liked = true;
+      delete response.likes;        
+    } else {
+      this._liked = false;
+    }
+    
+   
+      
     return response;    
   }
 });

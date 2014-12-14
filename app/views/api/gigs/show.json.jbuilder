@@ -1,4 +1,4 @@
-json.extract!(@gig, :title, :price, :creator_id, :image_url, :description)
+json.extract!(@gig, :title, :price, :creator_id, :image_url, :description, :likes)
 
 json.gigextras(@gig.extras) do |extra|
   json.id extra.id
@@ -15,4 +15,4 @@ json.creator do
   json.other_gigs @gig.creator.other_gigs(@gig.id)
 end
 
-
+# json.is_liked gig.liked_by?(current_user)

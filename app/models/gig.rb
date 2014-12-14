@@ -28,5 +28,20 @@ class Gig < ActiveRecord::Base
     foreign_key: :gig_id,
     primary_key: :id
   )
+
+  has_many :likes
+  
+  def liked_by?(user)
+    likes.any? { |like| like.user_id == user.id }
+  end
+   
+  # user_id = current_user.id
+  
+  # has_many(:current_user_likes, -> { where(["user_id = ?", 1])},
+#     class_name: "Like",
+#     foreign_key: :gig_id,
+#     primary_key: :id
+#   )
+#
   
 end

@@ -7,7 +7,11 @@
       <strong>$<%= gig.escape("price")%></strong>
     </span>
 
-    <span class="gig-like">
+    <span class="gig-like
+        <% if (gig.liked()) { %>
+          <%= 'liked' %>
+        <% } %>
+" data-like-gig-id="<%= gig.escape('id')%>">
       <aside class="gig-index-heart"><i class="fa fa-heart"></i></aside>
     </span>
 
