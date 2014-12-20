@@ -27,7 +27,12 @@ Gig.create!([
   {title: "I will submit your photo to the Daily Bugle", creator_id: 4, price: 5, image_url: "https://www.filepicker.io/api/file/CaYkCKfR0OGt87IbUWt4", description: "Because I've been so successful taking pictures of myself in the Spidey suit, I have special access to submit photos to the Daily Bugle directly. I can submit your picture for just $5"},
   {title: "I will pick an outift for you matching a celeb photo", creator_id: 6, price: 5, image_url: "https://www.filepicker.io/api/file/xlbAvsjGQ7Te80CyT6vg", description: "you show me a picture of any celebrity and I will find the entire outfit for you to purchase online. These sometimes can be very hard to figure out but I know all of the styles and brands and can match anything, even up to what exact ring the celeb is wearing."},
   {title: "I will send a happy birthday snapchat on your behalf", creator_id: 1, price: 5, image_url: "https://www.filepicker.io/api/file/FsHUUYAQROOJsJkAd1q9", description: "Sending a birthday wish is considered an act of love and kindness. However, in some cases people don't pick up their phone or check their emails in order to receive their birthday wishes. I will gladly send a Snapchat to the loved one of your choice. Snapchat users are very famous for always checking their snapchats, there are no 'over-full' inboxes."},
-  {title: "I will do a security analysis of your website", creator_id: 1, price: 5, image_url: "https://www.filepicker.io/api/file/P6BbUAt4SkqTfTqk5lmD", description: "I will do a full security analysis of your website including reports on the most common vulnerabilities. I will check your site for Cross-site Scripting, SQL Injection attacks and HTML injection attacks."}
+  {title: "I will do a security analysis of your website", creator_id: 1, price: 5, image_url: "https://www.filepicker.io/api/file/P6BbUAt4SkqTfTqk5lmD", description: "I will do a full security analysis of your website including reports on the most common vulnerabilities. I will check your site for Cross-site Scripting, SQL Injection attacks and HTML injection attacks. Your site may be at risk and all of your data could be compromised. Do not fall victim to hackers who mess up people's sites for fun."},
+  {title: "I will compose a 30 second theme song", creator_id: 6, price: 5, image_url: "https://www.filepicker.io/api/file/yDJnpkFeRMNdEEyv9doQ", description: "Everyone remembers the theme song to \'Friends\' and for good reason. The song exemplifies what the show is about and gets people excited becuase the song is part of the show's branding. I have a Bachelor's in Music Composition and can create a catchy theme song for you or your company. By default you receive an mp3."}
+  
+  
+  
+
 ])
 
 GigExtra.create!([
@@ -68,5 +73,12 @@ GigExtra.create!([
   {gig_id: 1, title: "I will draw a background themed to any time of the year", price: 5},
   {gig_id: 18, title: "I will include a report with specifics on how to fix each vulnerability", price: 10},
   {gig_id: 18, title: "I will give you a 15 minute skype interview explaining how to prevent future vulnerabilities", price: 5},
+  {gig_id: 19, title: "I will add lyrics to the instrumentals", price: 5},
+  {gig_id: 19, title: "I will include the musical score for the song", price: 15},
+  {gig_id: 19, title: "I will extend the song to 1 minute long", price: 5},
+  {gig_id: 19, title: "I will deliver you the song in mp3 and wav format", price: 5}
+  
+
+  
     
 ])
