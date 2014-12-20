@@ -89,10 +89,13 @@ footer, .page-wrap:after {
 .welcome h3 {
   margin-top: 5px;
 }
-
+.navbar-nav > li > .dropdown-menu {
+  width: 100%;
+}
 body {
 //  background-color: #F7F7F7;
-  background-color: #eeeeee;
+//  background-color: #eeeeee; //darker gray
+  background-color: #FDFDFD; //lighter gray
 }
 
 a {

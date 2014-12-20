@@ -26,8 +26,10 @@ Gigrr.Views.GigsNew = Backbone.View.extend({
         alert("Gig Succesfully saved!");
         Backbone.history.navigate("gigs/" + this.model.id, {trigger: true})
       }.bind(this),
-      error: function(){
-        alert("Gig not saved")
+      error: function(json, msg){
+        var text = ""
+        msg.responseJSON.forEach(function(msg){ text = text + msg + " \n" })
+        alert("Sorry, your gig did not save:\n" + text)
       }
     })
   },

@@ -100,19 +100,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li id="home-tab"><a href="<%= logged_in? ? "#" : "/" %>">Home <span class="sr-only">(current)</span></a></li>
-        <!-- <li><a href="#">Link</a></li> -->
-        <!-- <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li> -->
+
+        </li>
       </ul>
       <!-- <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
@@ -123,9 +112,15 @@
       <ul class="nav navbar-nav navbar-right">
         
         <% if logged_in? %>
-          <li id="edit-user-tab"><a href="#users/<%= current_user.id %>/edit">Edit profile</a></li>
-          <li id="new-gig-tab"><a href="#gigs/new">Make a New Gig</a></li>
-          <li id="current-user-tab"><a href="#users/<%= current_user.id %>">Currently logged in as <%= current_user.username %></a></li>
+          <li class="dropdown">
+            <a href="#" id="current-user-tab" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Currently logged in as <%= current_user.username %><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li id="new-gig-tab"><a href="#gigs/new">Make a new Gig</a></li>
+              <li class="divider"></li>
+              <li><a href="#users/<%= current_user.id %>">My profile</a></li>
+              <li id="edit-user-tab"><a href="#users/<%= current_user.id %>/edit">Edit profile</a></li>
+            </ul>
+
         <li><%= button_to "Log out", session_url, method: "delete", class: "btn btn-default navbar-btn" %></li>
           <!-- <%= button_to "Delete Account", user_url(current_user.id), method: "delete" %> -->
         <% else %>
