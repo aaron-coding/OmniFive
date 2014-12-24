@@ -15,14 +15,16 @@
     </ul>      
   <% } %>
   
-  <p> Extras included in your order: </p>
-  <ul>
-    <% _.each(order.get('gig_extras'), function(extra) {  %>
-      <li>
-        <%= extra.title %> for&nbsp;$<%= extra.price %>
-      </li>
-    <% }) %>
-  </ul>
+  <% if (order.get('gig_extras').length > 0) { %>
+    <p> Extras included in your order: </p>
+    <ul>
+      <% _.each(order.get('gig_extras'), function(extra) {  %>
+        <li>
+          <%= extra.title %> for&nbsp;$<%= extra.price %>
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
       
   <% if (order.gig().escape('image_url')) { %>
     <img src="<%= order.gig().escape('image_url')%>/convert?w=600&h=400&fit=crop">
