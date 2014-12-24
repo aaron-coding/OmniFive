@@ -24,6 +24,7 @@ class Order < ActiveRecord::Base
   
   has_many :order_extras
   
+  has_one :review
   
   has_many :gig_extras, through: :order_extras, source: :gig_extra
   

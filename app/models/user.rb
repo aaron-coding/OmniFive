@@ -10,6 +10,7 @@
 #  updated_at      :datetime
 #  creator_desc    :string(255)
 #  image_url       :string(255)      default("/assets/default-avatar.jpg"), not null
+#  email           :string(255)      default("default@gmail.com"), not null
 #
 
 class User < ActiveRecord::Base
