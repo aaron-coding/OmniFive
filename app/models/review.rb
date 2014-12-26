@@ -11,8 +11,7 @@
 #
 
 class Review < ActiveRecord::Base
-  # validates
-  validates :content, :order, presence: true
+  validates :content, :order, :buyer, :gig, presence: true
   validates :stars, inclusion: { in: 1..5 }
   validates :order_id, :uniqueness => true
   belongs_to :order

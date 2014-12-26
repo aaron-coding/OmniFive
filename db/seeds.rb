@@ -10,7 +10,7 @@ User.create!([
 ])
 
 Gig.create!([
-  {title: "I will draw a cartoon of you", creator_id: 2, price: 5, image_url: "https://www.filepicker.io/api/file/NB2cS44qS9OxD7x0CXhG", description: "You send me a picture of yourself and I will draw you in caricature form. I have drawn over 500 people in the past. For a little extra I can draw you and you family together."},  
+  {title: "I will draw your cartoon self on paper", creator_id: 2, price: 5, image_url: "https://www.filepicker.io/api/file/NB2cS44qS9OxD7x0CXhG", description: "You send me a picture of yourself and I will draw you in caricature form. I have drawn over 500 people in the past. For a little extra I can draw you and you family together."},  
   {title: "I will sing hey there Delilah, customized to your name", creator_id: 1, price: 5, image_url: "https://www.filepicker.io/api/file/N3UbKSJJS9ygMwR9E3as", description: "I will sing hey there Delilah, customized to your name"},
   {title: "I will add Google Maps to your existing website", creator_id: 1, price: 5, image_url: "https://www.filepicker.io/api/file/LUdINzJsRYqbfMSqKpak", description: "I will add Google Maps to your existing website"},
   {title: "I will write a glorious short story based on your life", creator_id: 1, price: 5, image_url: "https://www.filepicker.io/api/file/r2Kll5yQse9w0DYpfZ4G", description: "The story is 250 words long by default, but I can make it longer with gig extras. I also need events in your life that you are proud of so I can write about them. I can use names of friends and relatives in your life or I can make the names up."},
@@ -76,9 +76,20 @@ GigExtra.create!([
   {gig_id: 19, title: "I will add lyrics to the instrumentals", price: 5},
   {gig_id: 19, title: "I will include the musical score for the song", price: 15},
   {gig_id: 19, title: "I will extend the song to 1 minute long", price: 5},
-  {gig_id: 19, title: "I will deliver you the song in mp3 and wav format", price: 5}
-  
+  {gig_id: 19, title: "I will deliver you the song in mp3 and wav format", price: 5}    
+])
 
-  
-    
+Order.create!([
+  {buyer_id: 8, gig_id: 1},
+  {buyer_id: 3, gig_id: 1},
+  {buyer_id: 8, gig_id: 2},
+  {buyer_id: 8, gig_id: 3},
+  {buyer_id: 8, gig_id: 4},
+  {buyer_id: 8, gig_id: 5},
+  {buyer_id: 1, gig_id: 9}
+])
+
+Review.create!([
+  {content: "The best version of me I've ever seen! Perfect drawing skills.", stars: 5, order_id: 1},
+  {content: "Terrible. The picture of \"me\" turned out to look 99% like Justin Beiber. Beware this is a fraud.", stars: 1, order_id: 2},
 ])

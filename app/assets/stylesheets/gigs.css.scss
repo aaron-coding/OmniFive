@@ -295,6 +295,23 @@ td input[type="checkbox"] {
   border: 1px solid transparent;
 }
 
+.gig-index-heart:hover:after {
+  content: "like";
+  position: relative;
+  bottom: 50px;
+  color: white;
+  background-color: black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.gig-index-heart:hover:before {
+  content: " ";
+//  margin-left: -5px;
+//  margin-bottom: -12px;
+//  border-top-color: #383838;
+}
+
 .gig-like {
   color: #C7D1CF;
 }
