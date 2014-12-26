@@ -6,7 +6,3 @@ json.array!(@gigs) do |gig|
   json.image_url gig.image_url
   json.is_liked gig.liked_by?(current_user)
 end
-
-# @likes.each do |like|
-#   json.id like.id
-# end

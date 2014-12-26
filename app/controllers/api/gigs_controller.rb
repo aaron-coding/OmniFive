@@ -1,8 +1,6 @@
 class Api::GigsController < ApplicationController
   def index
     @gigs = Gig.includes(:likes)
-    # @gigs = Gig.all.includes(:current_user_likes)
-    # @likes = Like.where("user_id =?", current_user.id)
     render :index
   end
   
