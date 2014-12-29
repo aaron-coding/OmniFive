@@ -14,5 +14,3 @@ json.creator do
   json.creator_desc @gig.creator.creator_desc
   json.other_gigs @gig.creator.other_gigs(@gig.id)
 end
-
-# json.is_liked gig.liked_by?(current_user)

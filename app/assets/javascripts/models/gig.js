@@ -36,8 +36,6 @@ Gigrr.Models.Gig = Backbone.Model.extend({
     } else {
       this._liked = false;
     }
-    
-   
       
     return response;    
   }

@@ -1,7 +1,9 @@
 Gigrr.Views.OrdersShow = Backbone.View.extend({
 
   template: JST['orders/show'],
+  
   className: "orders-show",
+  
   initialize: function(options){
     this.listenTo(this.model, "sync", this.render);
   },

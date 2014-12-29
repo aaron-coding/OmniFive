@@ -35,14 +35,5 @@ class Gig < ActiveRecord::Base
     return false if user.nil?
     likes.any? { |like| like.user_id == user.id }
   end
-   
-  # user_id = current_user.id
-  
-  # has_many(:current_user_likes, -> { where(["user_id = ?", 1])},
-#     class_name: "Like",
-#     foreign_key: :gig_id,
-#     primary_key: :id
-#   )
-#
-  
+     
 end

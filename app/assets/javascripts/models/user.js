@@ -17,8 +17,6 @@ Gigrr.Models.User = Backbone.Model.extend({
       delete response.gigs;
     }
     
-
-    
     return response
   }
   
