@@ -4,7 +4,7 @@ class Api::ReviewsController < ApplicationController
     if params[:gig_id]
       @reviews = Gig.find(params[:gig_id]).reviews
     elsif params[:user_id] 
-      @reviews = User.find(params[:user_id]).reviews
+      @reviews = User.find(params[:user_id]).reviews_on_self
     end
     render json: @reviews
   end
