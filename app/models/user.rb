@@ -34,6 +34,10 @@ class User < ActiveRecord::Base
     primary_key: :id
   )
   
+  has_many :reviews, through: :orders, source: :review
+  
+  has_many :reviews_on_self, through: :gigs, source: :reviews
+  
   has_many :likes
   
   def password

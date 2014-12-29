@@ -30,6 +30,9 @@ class Gig < ActiveRecord::Base
   )
 
   has_many :likes
+  has_many :orders
+  
+  has_many :reviews, through: :orders, source: :review
   
   def liked_by?(user)
     return false if user.nil?
