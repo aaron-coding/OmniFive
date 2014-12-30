@@ -57,12 +57,17 @@
     </aside>
     
   </div>
+          
+  <div class="gig-reviews-wrapper">
+  </div>
+          
   <div class="creator-other-gigs">
     <% if (gig.creator()) { %>
       <% if (gig.creator().gigs().length > 0) { %>
       <h3>Other Gigs by <a href="#users/<%= gig.creator().id %>"><%= gig.creator().get('username') %></a></h3>
       <% } %>
     <% } %>
+
     <div class="gigs-index-wrapper">
     </div>
   </div>

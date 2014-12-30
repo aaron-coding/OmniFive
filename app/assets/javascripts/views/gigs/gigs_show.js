@@ -12,6 +12,7 @@ Gigrr.Views.GigsShow = Backbone.CompositeView.extend({
     var renderedContent = this.template({ gig: this.model });
     this.$el.html(renderedContent);
     this.addGigExtrasIndex();
+    this.addGigReviews();
     this.addCreatorsOtherGigs();
     return this;
   },
@@ -19,6 +20,14 @@ Gigrr.Views.GigsShow = Backbone.CompositeView.extend({
   addGigExtrasIndex: function(){
     this.extrasIdxView = new Gigrr.Views.GigExtrasIndex({ collection: this.model.extras() })
     this.addSubview(".main-gig-extras", this.extrasIdxView)
+  },
+  
+  addGigReviews: function(){
+    var creator = this.model.creator();
+    if (creator) {
+      var reviewsIndexView = new Gigrr.Views.ReviewsIndex({ });
+      this.addSubview(".gig-reviews-wrapper", reviewsIndexView);
+    }
   },
   
   addCreatorsOtherGigs: function(){
